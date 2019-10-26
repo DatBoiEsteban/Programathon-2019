@@ -3,11 +3,21 @@ package com.stardust.programathon2019;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.stardust.programathon2019.Controller.ServiceGenerator;
+import com.stardust.programathon2019.Model.TempUser;
+import com.stardust.programathon2019.Network.SessionService;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ScrollingActivity extends AppCompatActivity {
 
@@ -22,10 +32,29 @@ public class ScrollingActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                SessionService service = ServiceGenerator.createService(SessionService.class, "1111", "Te$t1234");
+                Call<TempUser> call = service.login();
+                call.enqueue(new Callback<TempUser>() {
+                    @Override
+                    public void onResponse(Call<TempUser> call, Response<TempUser> response) {
+                        if (response.isSuccessful()) {
+                            // user object available
+                            System.out.println("HARD");
+                        } else {
+                            // error response, no access to resource?
+                            System.out.println("Se despicho tere");
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<TempUser> call, Throwable t) {
+                        // something went completely south (like no internet connection)
+                        Log.d("Error", t.getMessage());
+                    }
+                });
             }
         });
+
     }
 
     @Override
