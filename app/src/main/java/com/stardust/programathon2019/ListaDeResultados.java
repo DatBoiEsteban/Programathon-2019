@@ -18,6 +18,7 @@ import com.stardust.programathon2019.Model.AreaResult;
 import com.stardust.programathon2019.Model.Attendance;
 import com.stardust.programathon2019.Model.AttendanceResult;
 import com.stardust.programathon2019.Model.AwaitableResponse;
+import com.stardust.programathon2019.Model.Kid;
 import com.stardust.programathon2019.Model.Result;
 import com.stardust.programathon2019.Model.ResultASQ;
 
@@ -29,6 +30,8 @@ public class ListaDeResultados extends AppCompatActivity implements AwaitableRes
     private Button btnComuni,btnfina, btngrue, btnsol, btnindi;
     private Button btnrestComu, btnRestFina, btnRestgrue, btnRestSol, btnRestInti;
     private Button backButton;
+
+    private TextView nombre, meses,prueba, fecha;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,8 +80,16 @@ public class ListaDeResultados extends AppCompatActivity implements AwaitableRes
                 finish();
             }
         });
-
+        Kid kido = (Kid) SessionManager.getInstance().getSession().retrieve("kid_map");
+        nombre = findViewById(R.id.lista_resultados_nombre_niño);
+        nombre.setText(kido.getFirstName() + " " + kido.getLastName());
+        meses = findViewById(R.id.lista_resultados_meses_niño);
+        meses.setText(kido.getMonths() + " meses");
+        prueba = findViewById(R.id.lista_resultados_nombre_prueba);
+        fecha = findViewById(R.id.lista_resultados_fecha);
         Attendance a = (Attendance) SessionManager.getInstance().getSession().retrieve("AttendanceID");
+        prueba.setText(a.getForm().getName());
+        fecha.setText(a.getDate());
 
         ResultController.GetResultByAttendanceId(a.getId(), this);
     }
@@ -101,26 +112,31 @@ public class ListaDeResultados extends AppCompatActivity implements AwaitableRes
 
         btnComuni = findViewById(R.id.lista_resultados_puntaje_0);
         btnComuni.setBackgroundColor(getColorByArea(Area.communication,accs.get(0)));
+        btnComuni.setText(accs.get(0) + "");
         btnrestComu = findViewById(R.id.lista_resultados_limite_0);
         btnrestComu.setText("30.72");
 
-        btnfina = findViewById(R.id.lista_resultados_puntaje_1);
+        btnfina = findViewById(R.id.lista_resultados_puntaje_2);
         btnfina.setBackgroundColor(getColorByArea(Area.fineMotor,accs.get(1)));
-        btnRestFina = findViewById(R.id.lista_resultados_limite_1);
-        btnRestFina.setText("32.78");
+        btnfina.setText(accs.get(1) + "");
+        btnRestFina = findViewById(R.id.lista_resultados_limite_2);
+        btnRestFina.setText("15.81");
 
-        btngrue = findViewById(R.id.lista_resultados_puntaje_2);
+        btngrue = findViewById(R.id.lista_resultados_puntaje_1);
         btngrue.setBackgroundColor(getColorByArea(Area.grossMotor,accs.get(2)));
-        btnRestgrue = findViewById(R.id.lista_resultados_limite_2);
-        btnRestgrue.setText("15.81");
+        btngrue.setText(accs.get(2) + "");
+        btnRestgrue = findViewById(R.id.lista_resultados_limite_1);
+        btnRestgrue.setText("32.78");
 
         btnsol = findViewById(R.id.lista_resultados_puntaje_3);
         btnsol.setBackgroundColor(getColorByArea(Area.problemSolving,accs.get(3)));
+        btnsol.setText(accs.get(3) + "");
         btnRestSol = findViewById(R.id.lista_resultados_limite_3);
         btnRestSol.setText("31.30");
 
         btnindi = findViewById(R.id.lista_resultados_puntaje_4);
         btnindi.setBackgroundColor(getColorByArea(Area.personalSocial,accs.get(4)));
+        btnindi.setText(accs.get(4) + "");
         btnRestInti = findViewById(R.id.lista_resultados_limite_4);
         btnRestInti.setText("26.60");
     }
@@ -161,7 +177,7 @@ public class ListaDeResultados extends AppCompatActivity implements AwaitableRes
         } else if (area == Area.personalSocial) {
             if (score < 25) {
                 return Color.RED;
-            } else if (score < 39) {
+            } else if (score <= 35) {
                 return Color.YELLOW;
             } else {
                 return Color.GREEN;

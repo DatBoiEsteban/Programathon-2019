@@ -68,6 +68,7 @@ public class questionaire_table extends AppCompatActivity implements AwaitableRe
         for (final Attendance result: results) {
             final TableRow row = new TableRow(this);
             final TextView testName = new TextView(this);
+            final TextView dateText = new TextView(this);
             testName.setText(result.getForm().getName());
             testName.setTextSize(18);
             testName.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -80,7 +81,11 @@ public class questionaire_table extends AppCompatActivity implements AwaitableRe
                     startActivity(log);
                 }
             });
+            dateText.setText(result.getDate());
+            dateText.setTextSize(18);
+            dateText.setCompoundDrawablePadding(4);
             row.addView(testName);
+            row.addView(dateText);
             row.setBackground(getDrawable(R.drawable.table_format));
             table.addView(row);
         }
