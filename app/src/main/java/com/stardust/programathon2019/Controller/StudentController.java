@@ -25,6 +25,7 @@ public class StudentController {
         final AwaitableResponse callback  = awt;
 
 
+
         StudentService service = session.createService(StudentService.class);
         Call<ResponseBody> call = service.GetMyStudents();
         //System.out.println(call.toString());
@@ -64,9 +65,9 @@ public class StudentController {
     /**
      * @returns Kid[]
      */
-    public static void getStudentByName(String name){
+    public static void getStudentByName(String name,AwaitableResponse awt){
         final Session session = SessionManager.getInstance().getSession();
-        //final AwaitableResponse callback  = awt;
+        final AwaitableResponse callback  = awt;
 
 
         StudentService service = session.createService(StudentService.class);
@@ -77,18 +78,18 @@ public class StudentController {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 ObjectMapper objectMapper = new ObjectMapper();
                 try {
-                    //System.out.println("-------------------------------------------------------");
+                    System.out.println("-------------------------------------------------------");
                     System.out.println(response.body());
                     if(response.body() == null) return;
 
                     Kid[] entity = objectMapper.readValue(response.body().string(), Kid[].class);
-                    System.out.println(entity);
-                    System.out.println("!---------------------------");
-                    //callback.onComplete(entity);
+                    //System.out.println(entity);
+                    //System.out.println("!---------------------------");
+                    callback.onComplete(entity);
 
                 } catch (IOException e) {
                     e.printStackTrace();
-                    //callback.onComplete(null);
+                    callback.onComplete(null);
                 }
                 //callback.onComplete();
             }
@@ -97,7 +98,7 @@ public class StudentController {
                 // something went completely south (like no internet connection)
                 Log.d("Error", t.getMessage());
                 //callback.onComplete();
-                //callback.onComplete(null);
+                callback.onComplete(null);
 
             }
         });

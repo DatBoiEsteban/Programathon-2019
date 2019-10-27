@@ -24,6 +24,8 @@ public class Kid {
 
     @JsonProperty("form")
     private void unpackForm(Map<String,Object> form) {
+        if(form == null)return;
+
         int id = (Integer)form.get("id");
         String name = (String)form.get("name");
         boolean applied = (Boolean)form.get("applied");
@@ -33,6 +35,8 @@ public class Kid {
 
     @JsonProperty("classRoom")
     private void unpackClassRoom(Map<String,Object> classRoom) {
+        if(classRoom == null)return;
+
         int id = (Integer)classRoom.get("id");
         double classYear = (Double)classRoom.get("classYear");
         String section = (String)classRoom.get("section");

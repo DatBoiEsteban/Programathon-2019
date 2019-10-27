@@ -14,7 +14,7 @@ public interface StudentService {
     @GET("/ApiServer/api/Student/GetByClassRoom")
     Call<ResponseBody> GetByClassRoom();
 
-    @GET("/ApiServer/api/Student/GetByClassRoom")
+    @GET("/ApiServer/api/Student/GetByName")
     Call<ResponseBody> GetByName(@Query("studentName") String name );
 
     @GET("/ApiServer/api/Student/GetByClassName")
