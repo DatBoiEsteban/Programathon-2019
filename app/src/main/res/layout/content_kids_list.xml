@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/kidslist_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
@@ -60,9 +61,7 @@
                 android:paddingVertical="@dimen/table_padding_h"
                 android:text="@string/table_01"
                 android:textSize="@dimen/table_size" />
-
         </TableRow>
-
     </TableLayout>
 
     <Button
@@ -70,10 +69,10 @@
         android:layout_width="266dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:paddingVertical="12dp"
         android:background="@drawable/login_button"
+        android:onClick="searchKid"
+        android:paddingVertical="12dp"
         android:text="Consultar el formulario ASQ-3"
-        android:textColor="#ffffff"/>
-
+        android:textColor="#ffffff" />
 
 </LinearLayout>

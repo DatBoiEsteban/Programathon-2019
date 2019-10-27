@@ -27,10 +27,8 @@ public class LoginActivity extends AppCompatActivity implements Awaitable {
     private TextInputLayout id_entry;
     private TextInputLayout password_entry;
     private Button login_button;
-    private static final Pattern ID_PATTERN =
-            Pattern.compile("^[0-9]{1,10}$");
-    private static final Pattern PASSWORD_PATTERN =
-            Pattern.compile("^.{1,10}$");
+    private static final Pattern ID_PATTERN = Pattern.compile("^[0-9]{1,10}$");
+    private static final Pattern PASSWORD_PATTERN = Pattern.compile("^.{1,10}$");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +87,8 @@ public class LoginActivity extends AppCompatActivity implements Awaitable {
             String password = password_entry.getEditText().getText().toString();
             Session session = SessionManager.getInstance().getSession();
             session.login(username,password,this);
+            id_entry.getEditText().setText("");
+            password_entry.getEditText().setText("");
         } else {
             Toast.makeText(this, "Esta aplicación ocupa una conección a internet para funcionar", Toast.LENGTH_LONG).show();
         }
@@ -104,7 +104,7 @@ public class LoginActivity extends AppCompatActivity implements Awaitable {
     public void onComplete() {
         Session session = SessionManager.getInstance().getSession();
         if (session.isLogged()) {
-            Toast.makeText(this, "inicio sesion", Toast.LENGTH_SHORT).show();
+            // Toast.makeText(this, "inicio sesion", Toast.LENGTH_SHORT).show();
             Intent log = new Intent(this, KidsList.class);
             startActivity(log);
         } else {

@@ -35,7 +35,10 @@
 
     --> Query By Kid
     <string name="query_by_kid_message">Consulta por Niño</string>
-    <string name="query_by_kid_name_input">Nombre:</string>
+    <string name="query_by_kid_button_accept">Confirmar</string>
+    <string name="query_by_kid_button_message">Consultar</string>
+    <string name="query_by_kid_name_input">Cédula:</string>
+    <string name="query_by_kid_name">Nombre:</string>
     <string name="query_by_kid_Date">Fecha Actual:</string>
     <string name="query_by_kid_asq">ASQ-3 por aplicar:</string>
 
@@ -50,4 +53,8 @@
 
 
 
+
+    --> Questionaire
+    <string name="questionaire_Title">Lista de resultados ASQ-3</string>
+    <string name="questionaire_table_title">Test ASQ-3 realizados</string>
 </resources>
