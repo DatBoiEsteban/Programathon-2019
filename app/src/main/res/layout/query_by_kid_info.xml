@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/query_by_name_info_pop_up"
+    android:layout_width="350dp"
+    android:layout_height="350dp"
+    android:layout_gravity="center"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dip"
+        android:text="@string/query_by_kid_message"
+        android:textColor="#FF000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:text="@string/query_by_kid_name"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/query_by_name_dni_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:text="@string/query_by_kid_Date"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/query_by_name_date_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:text="@string/query_by_kid_asq"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/query_by_name_asq3_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/query_by_name_accept_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="2.5dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginBottom="2.5dip"
+        android:background="@drawable/login_button"
+        android:text="@string/query_by_kid_button_accept"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+</LinearLayout>
