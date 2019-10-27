@@ -8,10 +8,12 @@ import com.stardust.programathon2019.Model.Attendance;
 import com.stardust.programathon2019.Model.AttendanceResult;
 import com.stardust.programathon2019.Model.AwaitableResponse;
 import com.stardust.programathon2019.Model.Result;
+import com.stardust.programathon2019.Model.ResultASQ;
 import com.stardust.programathon2019.Network.AttendaceService;
 import com.stardust.programathon2019.Network.ResultService;
 
 import java.io.IOException;
+import java.util.List;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -61,6 +63,29 @@ public class ResultController {
                 Log.d("Error", t.getMessage());
                 //callback.onComplete();
                 callback.onComplete(null);
+
+            }
+        });
+    }
+
+    public static void updateResult(List<ResultASQ> results/*, AwaitableResponse awt*/){
+        final Session session = SessionManager.getInstance().getSession();
+        //final AwaitableResponse callback  = awt;
+
+
+        ResultService service = session.createService(ResultService.class);
+        Call<ResponseBody> call = service.updateResult(results);
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                System.out.println(response.isSuccessful());
+            }
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                // something went completely south (like no internet connection)
+                Log.d("Error", t.getMessage());
+                //callback.onComplete();
+                //callback.onComplete(null);
 
             }
         });
