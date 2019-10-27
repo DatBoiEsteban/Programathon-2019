@@ -67,9 +67,10 @@ public class Session {
 
 
     public <S> S createService(Class<S> serviceClass){
-        if(logged)
-            return ServiceGenerator.createService(serviceClass,token);
-        else
+        if(logged) {
+            //System.out.println("tokenized login");
+            return ServiceGenerator.createService(serviceClass, token);
+        }else
             return ServiceGenerator.createService(serviceClass);
 
     }
@@ -87,6 +88,8 @@ public class Session {
     }
 
     public void setLogin(LoginResult login) {
+
         this.login = login;
+        this.token = login.getAccess_token();
     }
 }
