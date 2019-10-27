@@ -2,24 +2,32 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".KidsList"
-    tools:showIn="@layout/activity_kids_list">
+    tools:context=".KidsList">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_margin="3dp"
+        android:background="@android:color/background_light"
+        tools:src="@mipmap/back_button_icon" />
 
     <TextView
         android:id="@+id/kidslist_title"
         android:layout_width="@dimen/title_text_w"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
         android:layout_marginLeft="12dp"
-        tools:ignore="MissingConstraints"
+        android:layout_marginTop="16dp"
         android:text="@string/kidslist_title"
         android:textColor="#000000"
         android:textSize="@dimen/titlesize"
         android:textStyle="bold"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="35dp"
         tools:layout_editor_absoluteY="72dp" />
 
@@ -30,16 +38,15 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginVertical="16dp">
 
-        <TableRow
-            android:gravity="center">
+        <TableRow android:gravity="center">
 
             <TextView
                 android:id="@+id/table_00"
                 android:layout_width="168dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingHorizontal="@dimen/table_padding_h"
                 android:paddingVertical="@dimen/table_padding_h"
-                android:gravity="center"
                 android:text="@string/table_00"
                 android:textSize="@dimen/table_size" />
 
@@ -47,9 +54,9 @@
                 android:id="@+id/table_01"
                 android:layout_width="168dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingHorizontal="@dimen/table_padding_h"
                 android:paddingVertical="@dimen/table_padding_h"
-                android:gravity="center"
                 android:text="@string/table_01"
                 android:textSize="@dimen/table_size" />
 

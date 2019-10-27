@@ -10,7 +10,7 @@
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="title_text_w">224dp</dimen>
     <dimen name="title_text_h">54dp</dimen>
-    <dimen name="titlesize">24dp</dimen>
-    <dimen name="table_size">20dp</dimen>
+    <dimen name="titlesize">18dp</dimen>
+    <dimen name="table_size">18dp</dimen>
     <dimen name="table_padding_h">4dp</dimen>
 </resources>
