@@ -1,10 +1,12 @@
 package com.stardust.programathon2019.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
 import java.util.Map;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Kid {
     String dob;
     String joinDate;
@@ -32,7 +34,7 @@ public class Kid {
     @JsonProperty("classRoom")
     private void unpackClassRoom(Map<String,Object> classRoom) {
         int id = (Integer)classRoom.get("id");
-        int classYear = (Integer)classRoom.get("classYear");
+        double classYear = (Double)classRoom.get("classYear");
         String section = (String)classRoom.get("section");
         int status = (Integer)classRoom.get("status");
         int gradeId = (Integer)classRoom.get("gradeId");
@@ -42,5 +44,4 @@ public class Kid {
 
     }
 
-    
 }

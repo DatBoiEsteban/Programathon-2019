@@ -101,7 +101,6 @@ public class LoginActivity extends AppCompatActivity implements Awaitable {
             Toast.makeText(this, "El usuario o contraseña son incorrectos", Toast.LENGTH_SHORT).show();
         }
 
-        //test get students
-        StudentController.getMyStudents();
+        
     }
 }
