@@ -124,7 +124,7 @@ public class StudentController {
                     System.out.println(response.body());
                     if(response.body() == null) return;
 
-                    Kid[] entity = objectMapper.readValue(response.body().string(), Kid[].class);
+                    Kid entity = objectMapper.readValue(response.body().string(), Kid.class);
                     //System.out.println(entity);
                     //System.out.println("!---------------------------");
                     callback.onComplete(entity);
