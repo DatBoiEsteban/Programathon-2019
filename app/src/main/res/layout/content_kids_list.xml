@@ -16,7 +16,7 @@
         android:layout_margin="3dp"
         android:background="@android:color/background_light"
         android:onClick="showPopUp"
-        tools:src="@mipmap/back_button_icon" />
+        android:src="@mipmap/back_button_icon" />
 
     <TextView
         android:id="@+id/kidslist_title"
