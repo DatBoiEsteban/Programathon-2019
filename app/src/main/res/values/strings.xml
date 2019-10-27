@@ -28,8 +28,14 @@
     <string name="password_input">Contraseña</string>
     <string name="login_button_text">Ingresar</string>
 
-    -->
+    --> Log Out PopUp
     <string name="log_out_message">¿Desea salir de la aplicación?</string>
     <string name="log_out_accept">Aceptar</string>
     <string name="log_out_deny">Cancelar</string>
+
+    --> Query By Kid
+    <string name="query_by_kid_message">Consulta por Niño</string>
+    <string name="query_by_kid_name_input">Nombre:</string>
+    <string name="query_by_kid_Date">Fecha Actual:</string>
+    <string name="query_by_kid_asq">ASQ-3 por aplicar:</string>
 </resources>

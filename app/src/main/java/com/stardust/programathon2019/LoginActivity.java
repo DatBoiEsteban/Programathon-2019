@@ -49,10 +49,10 @@ public class LoginActivity extends AppCompatActivity implements Awaitable {
         String dni = id_entry.getEditText().getText().toString().trim();
 
         if (dni.isEmpty()) {
-            id_entry.setError("El campo no puede estar vacio");
+            id_entry.setError("El campo no puede estar vacío");
             return false;
         } else if (!ID_PATTERN.matcher(dni).matches()) {
-            id_entry.setError("no cumple");
+            id_entry.setError("Debe ser una cédula valida");
             return false;
         } else {
             id_entry.setError(null);
@@ -64,10 +64,10 @@ public class LoginActivity extends AppCompatActivity implements Awaitable {
         String passwordInput = password_entry.getEditText().getText().toString().trim();
 
         if (passwordInput.isEmpty()) {
-            password_entry.setError("El campo no puede ser vacio");
+            password_entry.setError("El campo no puede estar vacío");
             return false;
         } else if (!PASSWORD_PATTERN.matcher(passwordInput).matches()) {
-            password_entry.setError("no cumple");
+            password_entry.setError("Debe ser una contraseña válida");
             return false;
         } else {
             password_entry.setError(null);
@@ -92,13 +92,14 @@ public class LoginActivity extends AppCompatActivity implements Awaitable {
     @Override
     public void onComplete() {
         Session session = SessionManager.getInstance().getSession();
-        boolean logged = session.isLogged();
-        if (logged) {
+        if (session.isLogged()) {
             Toast.makeText(this, "inicio sesion", Toast.LENGTH_SHORT).show();
             Intent log = new Intent(this, KidsList.class);
             startActivity(log);
-        } else {
+        } else if (session.isConnected()) {
             Toast.makeText(this, "El usuario o contraseña son incorrectos", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Esta aplicación ocupa una conección a internet para funcionar", Toast.LENGTH_LONG).show();
         }
         StudentController.getStudentByName("Martin");
 
