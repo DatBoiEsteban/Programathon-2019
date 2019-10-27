@@ -16,7 +16,7 @@ import com.stardust.programathon2019.Controller.SessionManager;
 import com.stardust.programathon2019.Model.Kid;
 
 public class KidDataShell extends AppCompatActivity {
-    TextView name;
+    TextView name, dni, class_text, test, status, birthday;
     private Dialog dialog;
 
     @Override
@@ -29,6 +29,17 @@ public class KidDataShell extends AppCompatActivity {
 
         name = findViewById(R.id.shell_name);
         name.setText(kid.getFirstName() + " " + kid.getLastName());
+        dni = findViewById(R.id.shell_dni);
+        String dni_text = String.valueOf(kid.getDni());
+        class_text = findViewById(R.id.shell_class);
+        class_text.setText("Año clase: " +kid.getClassRoom().getClassYear());
+        dni.setText("Cédula: " + dni_text);
+        test = findViewById(R.id.shell_test);
+        test.setText("Prueba: " +kid.getForm().getName());
+        status = findViewById(R.id.shell_status);
+        status.setText("Estado: " + kid.getStatus());
+        birthday = findViewById(R.id.shell_birthday);
+        birthday.setText("Fecha de Nacimiento: " + kid.getDob());
         dialog = new Dialog(this);
     }
 

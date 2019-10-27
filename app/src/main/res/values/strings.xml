@@ -38,6 +38,7 @@
     <string name="query_by_kid_button_accept">Confirmar</string>
     <string name="query_by_kid_button_message">Consultar</string>
     <string name="query_by_kid_name_input">Cédula:</string>
+    <string name="query_by_kid_name">Nombre:</string>
     <string name="query_by_kid_Date">Fecha Actual:</string>
     <string name="query_by_kid_asq">ASQ-3 por aplicar:</string>
     

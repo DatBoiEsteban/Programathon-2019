@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dip"
-        android:text="@string/query_by_kid_name_input"
+        android:text="@string/query_by_kid_name"
         android:textSize="18sp" />
 
     <TextView
