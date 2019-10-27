@@ -39,7 +39,10 @@ public class Session {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 ObjectMapper objectMapper = new ObjectMapper();
                 try {
-                    if(response.body() == null) return;
+                    if(response.body() == null) {
+                        callback.onComplete();
+                        return;
+                    }
 
                     LoginResult entity = objectMapper.readValue(response.body().string(), LoginResult.class);
                     System.out.println(entity.getAccess_token());
@@ -67,9 +70,10 @@ public class Session {
 
 
     public <S> S createService(Class<S> serviceClass){
-        if(logged)
-            return ServiceGenerator.createService(serviceClass,token);
-        else
+        if(logged) {
+            //System.out.println("tokenized login");
+            return ServiceGenerator.createService(serviceClass, token);
+        }else
             return ServiceGenerator.createService(serviceClass);
 
     }
@@ -87,6 +91,8 @@ public class Session {
     }
 
     public void setLogin(LoginResult login) {
+
         this.login = login;
+        this.token = login.getAccess_token();
     }
 }
