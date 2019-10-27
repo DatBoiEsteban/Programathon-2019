@@ -17,4 +17,19 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="RadioButtonGreen" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/holo_green_light</item>
+        <item name="colorControlNormal">@android:color/holo_green_dark</item>
+    </style>
+    <style name="RadioButtonRed" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/holo_red_light</item>
+        <item name="colorControlNormal">@android:color/holo_red_dark</item>
+    </style>
+    <style name="RadioButtonYellow" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/holo_orange_light</item>
+        <item name="colorControlNormal">@android:color/holo_orange_dark</item>
+    </style>
 </resources>

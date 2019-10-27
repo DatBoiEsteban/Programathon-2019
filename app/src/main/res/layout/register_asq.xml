@@ -1,0 +1,1842 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_asq"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_margin="3dp"
+        android:background="@android:color/background_light"
+        android:onClick="showPopUp"
+        android:src="@mipmap/back_button_icon" />
+
+    <TextView
+        android:id="@+id/kidslist_title3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/title_register_asq"
+        android:textColor="#000000"
+        android:textSize="@dimen/titlesize"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context=".KidsList">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                app:srcCompat="@drawable/calification-17" />
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="1500dp">
+                //*************/
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/comunicacion_text"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/titlesize"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="72dp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="244dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupcomunicacion0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioGroupcomunicacion00"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioGroupcomunicacion01"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioGroupcomunicacion02"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupcomunicacion1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioGroupcomunicacion10"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioGroupcomunicacion11"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioGroupcomunicacion12"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupcomunicacion2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioGroupcomunicacion20"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioGroupcomunicacion21"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioGroupcomunicacion22"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupcomunicacion3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioGroupcomunicacion30"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioGroupcomunicacion31"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioGroupcomunicacion32"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupcomunicacion4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioGroupcomunicacion40"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioGroupcomunicacion41"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioGroupcomunicacion42"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupcomunicacion5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioGroupcomunicacion50"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioGroupcomunicacion51"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioGroupcomunicacion52"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+
+                </TableLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/motoragruesa_text"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/titlesize"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="72dp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="244dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioMotoraGruesa0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraGruesa00"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraGruesa01"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraGruesa02"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioMotoraGruesa1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraGruesa10"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraGruesa11"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraGruesa12"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioMotoraGruesa2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraGruesa20"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraGruesa21"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraGruesa22"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioMotoraGruesa3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraGruesa30"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraGruesa31"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraGruesa32"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioMotoraGruesa4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraGruesa40"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraGruesa41"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraGruesa42"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioMotoraGruesa5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraGruesa50"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraGruesa51"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraGruesa52"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+
+                </TableLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/motorafina_text"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/titlesize"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="72dp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="244dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioMotoraFina0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraFina00"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraFina01"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraFina02"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioMotoraFina1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraFina10"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraFina11"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraFina12"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioMotoraFina2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraFina20"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraFina21"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraFina22"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioMotoraFina3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraFina30"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraFina31"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraFina32"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioMotoraFina4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraFina40"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraFina41"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraFina42"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioMotoraFina5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraFina50"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraFina51"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioMotoraFina52"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+
+                </TableLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/problemas_text"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/titlesize"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="72dp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="244dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioResolucionProblemas0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioResolucionProblemas00"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioResolucionProblemas01"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioResolucionProblemas02"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioResolucionProblemas1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioResolucionProblemas10"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioResolucionProblemas11"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioResolucionProblemas12"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioResolucionProblemas2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioResolucionProblemas20"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioResolucionProblemas21"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioResolucionProblemas22"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioResolucionProblemas3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioResolucionProblemas30"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioResolucionProblemas31"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioResolucionProblemas32"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioResolucionProblemas4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioResolucionProblemas40"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioResolucionProblemas41"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioResolucionProblemas42"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioResolucionProblemas5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioResolucionProblemas50"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioResolucionProblemas51"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioResolucionProblemas52"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+
+                </TableLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/social_text"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/titlesize"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="72dp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="244dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioSocioIndividual0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioSocioIndividual00"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioSocioIndividual01"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioSocioIndividual02"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioSocioIndividual1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioSocioIndividual10"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioSocioIndividual11"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioSocioIndividual12"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioSocioIndividual2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioSocioIndividual20"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioSocioIndividual21"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioSocioIndividual22"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioSocioIndividual3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioSocioIndividual30"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioSocioIndividual31"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioSocioIndividual32"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioSocioIndividual4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioSocioIndividual40"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioSocioIndividual41"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioSocioIndividual42"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background = "@drawable/table_format">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1." />
+
+                        <Space
+                            android:layout_width="85dp"
+                            android:layout_height="20dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioSocioIndividual5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.4"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioSocioIndividual50"
+                                style="@style/RadioButtonGreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioSocioIndividual51"
+                                style="@style/RadioButtonYellow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+                            <RadioButton
+                                android:id="@+id/radioSocioIndividual52"
+                                style="@style/RadioButtonRed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="8dp" />
+
+
+                        </RadioGroup>
+                    </TableRow>
+
+                </TableLayout>
+
+                //*************/
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/back_button2"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_margin="3dp"
+        android:background="@android:color/background_light"
+        android:onClick="showPopUp"
+        android:src="@mipmap/back_button_icon" />
+
+    <TextView
+        android:id="@+id/kidslist_title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/kidslist_title"
+        android:textColor="#000000"
+        android:textSize="@dimen/titlesize"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+</LinearLayout>

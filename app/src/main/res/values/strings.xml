@@ -42,6 +42,18 @@
     <string name="query_by_kid_Date">Fecha Actual:</string>
     <string name="query_by_kid_asq">ASQ-3 por aplicar:</string>
 
+    --> Develop Center
+    <string name="title_develop_center">Ciclo de Desarrollo Integral</string>
+    <string name="title_register_asq">Registrar resultados del cuestionario ASQ-3 aplicado a un niño</string>
+    <string name="comunicacion_text">Comunicación</string>
+    <string name="motoragruesa_text">Motora Gruesa</string>
+    <string name="motorafina_text">Motora Fina</string>
+    <string name="problemas_text">Solución de Problemas</string>
+    <string name="social_text">Social/Individual</string>
+
+
+
+
     --> Questionaire
     <string name="questionaire_Title">Lista de resultados ASQ-3</string>
     <string name="questionaire_table_title">Test ASQ-3 realizados</string>
