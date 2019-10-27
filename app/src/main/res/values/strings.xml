@@ -40,4 +40,8 @@
     <string name="query_by_kid_name_input">Cédula:</string>
     <string name="query_by_kid_Date">Fecha Actual:</string>
     <string name="query_by_kid_asq">ASQ-3 por aplicar:</string>
+    
+    --> Questionaire
+    <string name="questionaire_Title">Lista de resultados ASQ-3</string>
+    <string name="questionaire_table_title">Test ASQ-3 realizados</string>
 </resources>
