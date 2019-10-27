@@ -1,13 +1,34 @@
 package com.stardust.programathon2019;
 
 import android.os.Bundle;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.gson.Gson;
+import com.stardust.programathon2019.Controller.ServiceGenerator;
+import com.stardust.programathon2019.Controller.Session;
+import com.stardust.programathon2019.Controller.SessionManager;
+import com.stardust.programathon2019.Model.LoginRequest;
+import com.stardust.programathon2019.Model.LoginResult;
+import com.stardust.programathon2019.Model.TempUser;
+import com.stardust.programathon2019.Network.SessionService;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.io.IOException;
+import java.util.HashMap;
+
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ScrollingActivity extends AppCompatActivity {
 
@@ -22,10 +43,13 @@ public class ScrollingActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+                //code required for login
+
+
             }
         });
+
     }
 
     @Override

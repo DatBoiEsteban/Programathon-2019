@@ -10,12 +10,15 @@ import android.util.Patterns;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.stardust.programathon2019.Controller.Session;
+import com.stardust.programathon2019.Controller.SessionManager;
+import com.stardust.programathon2019.Model.Awaitable;
 
 import java.util.regex.Pattern;
 
 
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements Awaitable {
     private TextInputLayout id_entry;
     private TextInputLayout password_entry;
     private Button login_button;
@@ -44,10 +47,10 @@ public class LoginActivity extends AppCompatActivity {
         String dni = id_entry.getEditText().getText().toString().trim();
 
         if (dni.isEmpty()) {
-            id_entry.setError("Field can't be empty");
+            id_entry.setError("El campo no puede estar vacio");
             return false;
         } else if (!ID_PATTERN.matcher(dni).matches()) {
-            id_entry.setError("se mamo perro");
+            id_entry.setError("no cumple");
             return false;
         } else {
             id_entry.setError(null);
@@ -59,10 +62,10 @@ public class LoginActivity extends AppCompatActivity {
         String passwordInput = password_entry.getEditText().getText().toString().trim();
 
         if (passwordInput.isEmpty()) {
-            password_entry.setError("Field can't be empty");
+            password_entry.setError("El campo no puede ser vacio");
             return false;
         } else if (!PASSWORD_PATTERN.matcher(passwordInput).matches()) {
-            password_entry.setError("Password too weak");
+            password_entry.setError("no cumple");
             return false;
         } else {
             password_entry.setError(null);
@@ -74,11 +77,23 @@ public class LoginActivity extends AppCompatActivity {
         if (!validateID() | !validatePassword()) {
             return;
         }
+        String username = id_entry.getEditText().getText().toString();
+        username="1111";
+        String password = password_entry.getEditText().getText().toString();
+        Session session = SessionManager.getInstance().getSession();
+        session.login(username,password,this);
 
-        String input = "Email: " + id_entry.getEditText().getText().toString();
-        input += "\n";
-        input += "Password: " + password_entry.getEditText().getText().toString();
 
-        Toast.makeText(this, input, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onComplete() {
+        Session session = SessionManager.getInstance().getSession();
+        boolean logged = session.isLogged();
+        if (logged) {
+            Toast.makeText(this, "inicio sesion", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "El usuario o contraseña son incorrectos", Toast.LENGTH_SHORT).show();
+        }
     }
 }
