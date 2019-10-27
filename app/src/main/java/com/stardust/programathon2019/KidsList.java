@@ -13,6 +13,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
 import com.stardust.programathon2019.Controller.AttendanceController;
+import com.stardust.programathon2019.Controller.ResultController;
 import com.stardust.programathon2019.Controller.StudentController;
 import com.stardust.programathon2019.Model.Attendance;
 import com.stardust.programathon2019.Model.AwaitableResponse;
@@ -88,6 +89,8 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
         dialog = new Dialog(this);
 
         ctx = getBaseContext();
+
+        
     }
 
     @Override
