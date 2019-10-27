@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/log_out_pop_up"
+    android:id="@+id/query_by_name_info_pop_up"
     android:layout_width="350dp"
     android:layout_height="350dp"
     android:layout_gravity="center"
@@ -67,7 +67,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/log_out_accept_button"
+        android:id="@+id/query_by_name_accept_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -76,7 +76,7 @@
         android:layout_marginRight="10dip"
         android:layout_marginBottom="2.5dip"
         android:background="@drawable/login_button"
-        android:text="@string/log_out_accept"
+        android:text="@string/query_by_kid_button_accept"
         android:textColor="#FFFFFF"
         android:textSize="18sp" />
 </LinearLayout>

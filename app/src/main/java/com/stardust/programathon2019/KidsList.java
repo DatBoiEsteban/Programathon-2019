@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputLayout;
 import com.stardust.programathon2019.Controller.StudentController;
 import com.stardust.programathon2019.Model.AwaitableResponse;
 import com.stardust.programathon2019.Model.Kid;
@@ -50,7 +51,7 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
         showPopUp(this.getCurrentFocus());
     }
 
-    public void showPopUp(View v) {
+    public void showPopUp(View v) {  //Log Out
         dialog.setContentView(R.layout.log_out_pop_up);
         Button btnClose = dialog.findViewById(R.id.log_out_accept_button);
         btnClose.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +72,28 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
         dialog.show();
     }
 
+    public void searchKid(View v) {
+        dialog.setContentView(R.layout.query_by_kid);
+        TextInputLayout studentName = dialog.findViewById(R.id.query_by_name_consult_text);
+        Button btnConsult = dialog.findViewById(R.id.query_by_name_consult_button);
+        btnConsult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                showKid(getCurrentFocus());
+            }
+        });
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
+    }
+
+    public void showKid(View v) {
+        dialog.setContentView(R.layout.query_by_kid_info);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
+
+    }
+
     private void updateTable(Kid[] kids) {
         for (Kid kid : kids) {
             final TableRow row = new TableRow(this);
@@ -84,7 +107,6 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
             test_name.setTextSize(18);
             test_name.setGravity(Gravity.CENTER_HORIZONTAL);
             test_name.setCompoundDrawablePadding(4);
-
             row.addView(kid_name);
             row.addView(test_name);
             row.setBackground(getDrawable(R.drawable.table_format));
