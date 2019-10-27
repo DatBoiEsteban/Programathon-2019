@@ -6,4 +6,11 @@ public class Kid {
     private String name;
     private Date birthDate;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
