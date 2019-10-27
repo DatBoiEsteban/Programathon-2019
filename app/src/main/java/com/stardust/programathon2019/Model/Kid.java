@@ -88,6 +88,23 @@ public class Kid {
 
     }
 
+    public long getMonths() {
+        DateFormat m_ISO8601Local = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+        try {
+            Date dateOfBirth= m_ISO8601Local.parse(dob);
+            Date today = new Date();
+
+            LocalDate ldateOfBirth = dateOfBirth.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+            LocalDate ltoday = today.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+
+            long months =  ChronoUnit.MONTHS.between(ldateOfBirth,ltoday);
+            return months;
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
     public String TestName(Long months, Long days){
         if(lowerLimit(57,0,months, days) && upperLimit(60, 30,months,days)){
             return "60 Meses ASQ-3";

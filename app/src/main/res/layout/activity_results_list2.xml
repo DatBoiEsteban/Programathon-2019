@@ -107,10 +107,16 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/lista_resultados_0_0"
+                        android:id="@+id/asfa"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1." />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_0_0"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
 
                     <TextView
                         android:id="@+id/lista_resultados_0_1"
@@ -132,12 +138,6 @@
 
                     <TextView
                         android:id="@+id/lista_resultados_0_4"
-                        android:layout_width="54dp"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/table_format" />
-
-                    <TextView
-                        android:id="@+id/lista_resultados_0_5"
                         android:layout_width="54dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/table_format" />
@@ -560,16 +560,7 @@
                     android:background="@drawable/login_button"
                     android:text="Editar"
                     android:textColor="#FFFFFF" />
-
-                <Button
-                    android:id="@+id/lista_resultados_boton_volver"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/login_button"
-                    android:text="Volver Atrás"
-                    android:textColor="#FFFFFF" />
+                
             </LinearLayout>
 
         </LinearLayout>

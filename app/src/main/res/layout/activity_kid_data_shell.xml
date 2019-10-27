@@ -111,7 +111,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/load_tests_button"
+        android:id="@+id/load_tests_button_kids_shell"
         android:layout_width="296dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -126,7 +126,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/register_button"
+        android:id="@+id/register_button_kids_shell"
         android:layout_width="296dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
