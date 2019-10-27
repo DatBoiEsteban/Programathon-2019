@@ -35,10 +35,11 @@ public class KidsList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kids_list);
+        setContentView(R.layout.content_kids_list);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        kids = new ArrayList<>();
+        tests = new ArrayList<>();
         table = findViewById(R.id.kidstable);
         updateTable();
         backButton = findViewById(R.id.back_button);
