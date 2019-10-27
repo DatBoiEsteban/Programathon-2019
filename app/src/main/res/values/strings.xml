@@ -27,4 +27,9 @@
     <string name="DNI_input">Cédula</string>
     <string name="password_input">Contraseña</string>
     <string name="login_button_text">Ingresar</string>
+
+    -->
+    <string name="log_out_message">¿Desea salir de la aplicación?</string>
+    <string name="log_out_accept">Aceptar</string>
+    <string name="log_out_deny">Cancelar</string>
 </resources>
