@@ -39,7 +39,10 @@ public class Session {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 ObjectMapper objectMapper = new ObjectMapper();
                 try {
-                    if(response.body() == null) return;
+                    if(response.body() == null) {
+                        callback.onComplete();
+                        return;
+                    }
 
                     LoginResult entity = objectMapper.readValue(response.body().string(), LoginResult.class);
                     System.out.println(entity.getAccess_token());
