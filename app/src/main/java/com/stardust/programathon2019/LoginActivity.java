@@ -23,9 +23,9 @@ public class LoginActivity extends AppCompatActivity implements Awaitable {
     private TextInputLayout password_entry;
     private Button login_button;
     private static final Pattern ID_PATTERN =
-            Pattern.compile("^[0-9]{9,10}$");
+            Pattern.compile("^[0-9]{1,10}$");
     private static final Pattern PASSWORD_PATTERN =
-            Pattern.compile("^.{8,10}$");
+            Pattern.compile("^.{1,10}$");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

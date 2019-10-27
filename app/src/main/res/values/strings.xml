@@ -4,4 +4,10 @@
     <string name="id_text">Cédula</string>
     <string name="password_text">Contraseña</string>
     <string name="login_button">Ingresar</string>
+
+    --> Login
+    <string name="LogoDescription">Dehvi Logo</string>
+    <string name="DNI_input">Cédula</string>
+    <string name="password_input">Contraseña</string>
+    <string name="login_button_text">Ingresar</string>
 </resources>
