@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HistoryActivity">
@@ -17,27 +18,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="1012dp"
-        android:layout_height="703dp"
-        android:layout_marginBottom="500dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@mipmap/results_foreground" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#9C27B0"
+        android:text="Historia de Resultados"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/history_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="176dp"
         android:text="Name"
         android:textColor="#000"
         android:textSize="18dp"
         android:textStyle="bold"
+        android:layout_margin="6dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,144 +43,305 @@
         android:id="@+id/history_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="208dp"
         android:text="Test"
         android:textColor="#000"
         android:textSize="18dp"
         android:textStyle="bold"
+        android:layout_margin="6dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TableLayout
+        android:id="@+id/lista_resultados_tabla_calificaciones"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="315dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="clip_vertical">
 
             <TextView
-                android:id="@+id/textView38"
-                android:layout_width="50dp"
-                android:layout_height="20dp"
-                android:text="Límite" />
+                android:id="@+id/textView28"
+                android:layout_width="54dp" />
 
             <TextView
-                android:id="@+id/textView39"
-                android:layout_width="50dp"
-                android:layout_height="20dp"
-                android:text="Puntaje" />
+                android:id="@+id/textView16"
+                android:layout_width="54dp"
+                android:layout_margin="5dp"
+                android:text="Com." />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="54dp"
+                android:layout_margin="5dp"
+                android:text="Mo. Grue." />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="54dp"
+                android:layout_margin="5dp"
+                android:text="Mo. Fi." />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="54dp"
+                android:layout_margin="5dp"
+                android:text="So. Pro." />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="54dp"
+                android:layout_margin="5dp"
+                android:text="Indiv. Social." />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/lista_resultados_limite_0"
-                android:layout_width="50dp"
-                android:layout_height="40dp" />
-
-            <Button
-                android:id="@+id/lista_resultados_puntaje_0"
-                android:layout_width="50dp"
-                android:layout_height="40dp" />
-
             <TextView
-                android:id="@+id/textView40"
+                android:id="@+id/asfa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Comunicación" />
+                android:text="1." />
+
+            <TextView
+                android:id="@+id/lista_resultados_0_0"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_0_1"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_0_2"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_0_3"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_0_4"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/lista_resultados_limite_1"
-                android:layout_width="50dp"
-                android:layout_height="40dp" />
-
-            <Button
-                android:id="@+id/lista_resultados_puntaje_1"
-                android:layout_width="50dp"
-                android:layout_height="40dp" />
-
             <TextView
-                android:id="@+id/textView41"
+                android:id="@+id/ags"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Motora Fina" />
+                android:text="2." />
+
+            <TextView
+                android:id="@+id/lista_resultados_1_0"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_1_1"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_1_2"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_1_3"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_1_4"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/lista_resultados_limite_2"
-                android:layout_width="50dp"
-                android:layout_height="40dp" />
-
-            <Button
-                android:id="@+id/lista_resultados_puntaje_2"
-                android:layout_width="50dp"
-                android:layout_height="40dp" />
-
             <TextView
-                android:id="@+id/textView42"
+                android:id="@+id/yt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Motora Gruesa" />
+                android:text="3." />
+
+            <TextView
+                android:id="@+id/lista_resultados_2_0"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_2_1"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_2_2"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_2_3"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_2_4"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/lista_resultados_limite_3"
-                android:layout_width="50dp"
-                android:layout_height="40dp" />
-
-            <Button
-                android:id="@+id/lista_resultados_puntaje_3"
-                android:layout_width="50dp"
-                android:layout_height="40dp" />
-
             <TextView
-                android:id="@+id/textView43"
+                android:id="@+id/pok"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Solucion de problemas" />
+                android:text="4." />
+
+            <TextView
+                android:id="@+id/lista_resultados_3_0"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_3_1"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_3_2"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_3_3"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_3_4"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/lista_resultados_limite_4"
-                android:layout_width="50dp"
-                android:layout_height="40dp" />
-
-            <Button
-                android:id="@+id/lista_resultados_puntaje_4"
-                android:layout_width="50dp"
-                android:layout_height="40dp" />
-
             <TextView
-                android:id="@+id/textView44"
+                android:id="@+id/iu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Social / individual" />
+                android:text="5." />
+
+            <TextView
+                android:id="@+id/lista_resultados_4_0"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_4_1"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_4_2"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_4_3"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_4_4"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
         </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6." />
+
+            <TextView
+                android:id="@+id/lista_resultados_5_0"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_5_1"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_5_2"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_5_3"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+
+            <TextView
+                android:id="@+id/lista_resultados_5_4"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_format" />
+        </TableRow>
+
     </TableLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
