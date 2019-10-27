@@ -68,17 +68,20 @@ public class ResultController {
         });
     }
 
-    public static void updateResult(List<ResultASQ> results/*, AwaitableResponse awt*/){
+    public static void addResult(AttendanceResult newResult, AwaitableResponse awt){
         final Session session = SessionManager.getInstance().getSession();
         //final AwaitableResponse callback  = awt;
 
 
         ResultService service = session.createService(ResultService.class);
-        Call<ResponseBody> call = service.updateResult(results);
+        Call<ResponseBody> call = service.addResults(newResult);
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 System.out.println(response.isSuccessful());
+
+                    System.out.println(response.message());
+
             }
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
