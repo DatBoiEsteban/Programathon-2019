@@ -19,7 +19,7 @@ import retrofit2.Response;
 public class Session {
     private boolean logged;
     private String token;
-    private UserInfo info;
+    private LoginResult login;
 
     public Session() {
 
@@ -44,6 +44,7 @@ public class Session {
                     LoginResult entity = objectMapper.readValue(response.body().string(), LoginResult.class);
                     System.out.println(entity.getAccess_token());
                     session.setLogged(true);
+                    session.setLogin(entity);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -81,11 +82,11 @@ public class Session {
         this.logged = logged;
     }
 
-    public UserInfo getInfo() {
-        return info;
+    public LoginResult getLogin() {
+        return login;
     }
 
-    public void setInfo(UserInfo info) {
-        this.info = info;
+    public void setLogin(LoginResult login) {
+        this.login = login;
     }
 }

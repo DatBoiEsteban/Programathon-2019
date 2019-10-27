@@ -16,6 +16,4 @@ public interface SessionService {
     @POST("/ApiServer/api/login")
     Call<ResponseBody> login(@Body LoginRequest request);
 
-    @POST("/login")
-    Call<TempUser> logOut();
 }
