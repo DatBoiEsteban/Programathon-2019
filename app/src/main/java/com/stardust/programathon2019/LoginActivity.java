@@ -16,6 +16,7 @@ import com.stardust.programathon2019.Controller.SessionManager;
 import com.stardust.programathon2019.Controller.StudentController;
 import com.stardust.programathon2019.Model.Awaitable;
 
+import java.net.InetAddress;
 import java.util.regex.Pattern;
 
 
@@ -78,15 +79,28 @@ public class LoginActivity extends AppCompatActivity implements Awaitable {
     }
 
     public void confirmInput(View v) {
-        if (!validateID() | !validatePassword()) {
-            return;
+        if (isInternetAvailable()) {
+            if (!validateID() | !validatePassword()) {
+                return;
+            }
+            String username = id_entry.getEditText().getText().toString();
+            String password = password_entry.getEditText().getText().toString();
+            Session session = SessionManager.getInstance().getSession();
+            session.login(username,password,this);
+        } else {
+            Toast.makeText(this, "Esta aplicación ocupa una conección a internet para funcionar", Toast.LENGTH_LONG).show();
         }
-        String username = id_entry.getEditText().getText().toString();
-        String password = password_entry.getEditText().getText().toString();
-        Session session = SessionManager.getInstance().getSession();
-        session.login(username,password,this);
 
+    }
 
+    public boolean isInternetAvailable() {
+        try {
+            InetAddress ipAddr = InetAddress.getByName("google.com");
+            //You can replace it with your name
+            return !ipAddr.equals("");
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     @Override
@@ -96,10 +110,8 @@ public class LoginActivity extends AppCompatActivity implements Awaitable {
             Toast.makeText(this, "inicio sesion", Toast.LENGTH_SHORT).show();
             Intent log = new Intent(this, KidsList.class);
             startActivity(log);
-        } else if (session.isConnected()) {
-            Toast.makeText(this, "El usuario o contraseña son incorrectos", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "Esta aplicación ocupa una conección a internet para funcionar", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "El usuario o contraseña son incorrectos", Toast.LENGTH_SHORT).show();
         }
         StudentController.getStudentByName("Martin");
 
