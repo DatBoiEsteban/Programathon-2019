@@ -1,5 +1,6 @@
 package com.stardust.programathon2019;
 
+import android.content.Context;
 import android.content.Intent;
 import android.app.Dialog;
 import android.graphics.Color;
@@ -21,9 +22,11 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,6 +38,7 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
     private TableLayout table;
     private ImageButton back_button;
     private Button consult_button;
+    private Context ctx;
 
     private Dialog dialog;
     @Override
@@ -47,6 +51,8 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
         table = findViewById(R.id.kidstable);
         back_button = findViewById(R.id.back_button);
         dialog = new Dialog(this);
+
+        ctx = getBaseContext();
     }
 
     @Override
@@ -76,6 +82,7 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
     }
 
     private void updateTable(Kid[] kids) {
+
         for (final Kid kid : kids) {
             final TableRow row = new TableRow(this);
             final TextView kid_name = new TextView(this);
@@ -91,15 +98,15 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
             kid_name.setClickable(true);
 
             kid_name.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (view == kid_name) {
-                        SessionManager.getInstance().getRawMap().put("kid_map", kid);
-                        Intent intent;
-                        intent = new Intent(view.getContext(), KidDataShell.class);
-                        startActivity(intent);
+                    @Override
+                    public void onClick(View view) {
+                        if (view == kid_name) {
+                            SessionManager.getInstance().getSession().store("kid_map", kid);
+                            Intent intent;
+                            intent = new Intent(view.getContext(), KidDataShell.class);
+                            startActivity(intent);
+                        }
                     }
-                }
             });
 
             row.addView(kid_name);
@@ -108,14 +115,18 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
 
             table.addView(row);
         }
+
+
     }
 
     @Override
     public void onComplete(Object obj) {
-        if (obj == null) {
+        Kid[] kids = (Kid[]) obj;
+        if (kids == null ||  kids.length==0) {
+            System.out.println("No kids");
+            Toast.makeText(ctx, "No se encontraron niños asociados a este usuario", Toast.LENGTH_SHORT).show();
             return;
         }
-        Kid[] kids = (Kid[])obj;
 
         updateTable(kids);
     }
