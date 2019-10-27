@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.stardust.programathon2019.Model.Awaitable;
 import com.stardust.programathon2019.Model.LoginRequest;
 import com.stardust.programathon2019.Model.LoginResult;
+import com.stardust.programathon2019.Model.UserInfo;
 import com.stardust.programathon2019.Network.SessionService;
 
 import java.io.IOException;
@@ -18,6 +19,7 @@ import retrofit2.Response;
 public class Session {
     private boolean logged;
     private String token;
+    private UserInfo info;
 
     public Session() {
 
@@ -77,5 +79,13 @@ public class Session {
 
     public void setLogged(boolean logged) {
         this.logged = logged;
+    }
+
+    public UserInfo getInfo() {
+        return info;
+    }
+
+    public void setInfo(UserInfo info) {
+        this.info = info;
     }
 }
