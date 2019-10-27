@@ -13,11 +13,17 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
 import com.stardust.programathon2019.Controller.AttendanceController;
+import com.stardust.programathon2019.Controller.FormController;
+import com.stardust.programathon2019.Controller.ResultController;
 import com.stardust.programathon2019.Controller.StudentController;
+import com.stardust.programathon2019.Model.AreaResult;
 import com.stardust.programathon2019.Model.Attendance;
 import com.stardust.programathon2019.Model.AwaitableResponse;
 import com.stardust.programathon2019.Model.Kid;
 import com.stardust.programathon2019.Controller.SessionManager;
+import com.stardust.programathon2019.Model.Result;
+import com.stardust.programathon2019.Model.ResultASQ;
+import com.stardust.programathon2019.Network.FormService;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -88,6 +94,14 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
         dialog = new Dialog(this);
 
         ctx = getBaseContext();
+
+        //FormController.getByName("10 Meses ASQ-3");
+
+        //List<ResultASQ> results = new ArrayList<>();
+
+        //ResultController.addResult(results);
+
+
     }
 
     @Override

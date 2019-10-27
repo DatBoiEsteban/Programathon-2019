@@ -3,34 +3,32 @@ package com.stardust.programathon2019.Controller;
 import android.util.Log;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.stardust.programathon2019.Model.AreaResult;
 import com.stardust.programathon2019.Model.Attendance;
-import com.stardust.programathon2019.Model.AttendanceRequest;
 import com.stardust.programathon2019.Model.AttendanceResult;
-import com.stardust.programathon2019.Model.Awaitable;
 import com.stardust.programathon2019.Model.AwaitableResponse;
-import com.stardust.programathon2019.Model.Kid;
+import com.stardust.programathon2019.Model.Result;
+import com.stardust.programathon2019.Model.ResultASQ;
 import com.stardust.programathon2019.Network.AttendaceService;
-import com.stardust.programathon2019.Network.StudentService;
+import com.stardust.programathon2019.Network.ResultService;
 
 import java.io.IOException;
+import java.util.List;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class AttendanceController {
+public class ResultController {
 
-    /**
-     * @returns Attendance
-     */
-    public static void getAttendanceByStudentId(int studentId, AwaitableResponse awt){
+    public static void GetResultByAttendanceId(int attendanceId, AwaitableResponse awt){
         final Session session = SessionManager.getInstance().getSession();
         final AwaitableResponse callback  = awt;
 
 
-        AttendaceService service = session.createService(AttendaceService.class);
-        Call<ResponseBody> call = service.getByStudentId(studentId);
+        ResultService service = session.createService(ResultService.class);
+        Call<ResponseBody> call = service.GetResultByAttendanceId(attendanceId);
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -40,7 +38,15 @@ public class AttendanceController {
                     System.out.println(response.body());
                     if(response.body() == null) return;
 
-                    Attendance[] entity = objectMapper.readValue(response.body().string(), Attendance[].class);
+                    AttendanceResult entity = objectMapper.readValue(response.body().string(), AttendanceResult.class);
+                    /*System.out.println(entity.getResultList().size());
+                    for(AreaResult res : entity.getResultList()){
+                        System.out.println(res.getAreaId());
+                        for(Result testRes : res.getResults()){
+                            System.out.println(testRes.getId() + "---" + testRes.getValue());
+                        }
+                    }*/
+
                     //System.out.println(entity);
                     //System.out.println("!---------------------------");
                     callback.onComplete(entity);
@@ -62,27 +68,27 @@ public class AttendanceController {
         });
     }
 
-
-    public static void addAttendance(AttendanceRequest attendance, Awaitable awt) {
+    public static void addResult(AttendanceResult newResult, AwaitableResponse awt){
         final Session session = SessionManager.getInstance().getSession();
         //final AwaitableResponse callback  = awt;
 
 
-        AttendaceService service = session.createService(AttendaceService.class);
-        Call<ResponseBody> call = service.addAttendance(attendance);
-        final Awaitable callback = awt;
+        ResultService service = session.createService(ResultService.class);
+        Call<ResponseBody> call = service.addResults(newResult);
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 System.out.println(response.isSuccessful());
-                callback.onComplete();
+
+                    System.out.println(response.message());
+
             }
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 // something went completely south (like no internet connection)
                 Log.d("Error", t.getMessage());
                 //callback.onComplete();
-                callback.onComplete();
+                //callback.onComplete(null);
 
             }
         });
