@@ -29,7 +29,7 @@
         tools:srcCompat="@mipmap/results_foreground" />
 
     <TextView
-        android:id="@+id/results_name"
+        android:id="@+id/history_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -42,23 +42,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/results_age"
+        android:id="@+id/history_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="204dp"
-        android:text="Age"
-        android:textColor="#000"
-        android:textSize="18dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/results_test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="208dp"
         android:text="Test"
         android:textColor="#000"
         android:textSize="18dp"
@@ -66,17 +54,135 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/results_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="272dp"
-        android:text="Date"
-        android:textColor="#000"
-        android:textSize="18dp"
-        android:textStyle="bold"
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="315dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:text="Límite" />
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:text="Puntaje" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/lista_resultados_limite_0"
+                android:layout_width="50dp"
+                android:layout_height="40dp" />
+
+            <Button
+                android:id="@+id/lista_resultados_puntaje_0"
+                android:layout_width="50dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comunicación" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/lista_resultados_limite_1"
+                android:layout_width="50dp"
+                android:layout_height="40dp" />
+
+            <Button
+                android:id="@+id/lista_resultados_puntaje_1"
+                android:layout_width="50dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Motora Fina" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/lista_resultados_limite_2"
+                android:layout_width="50dp"
+                android:layout_height="40dp" />
+
+            <Button
+                android:id="@+id/lista_resultados_puntaje_2"
+                android:layout_width="50dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Motora Gruesa" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/lista_resultados_limite_3"
+                android:layout_width="50dp"
+                android:layout_height="40dp" />
+
+            <Button
+                android:id="@+id/lista_resultados_puntaje_3"
+                android:layout_width="50dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Solucion de problemas" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/lista_resultados_limite_4"
+                android:layout_width="50dp"
+                android:layout_height="40dp" />
+
+            <Button
+                android:id="@+id/lista_resultados_puntaje_4"
+                android:layout_width="50dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Social / individual" />
+        </TableRow>
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
