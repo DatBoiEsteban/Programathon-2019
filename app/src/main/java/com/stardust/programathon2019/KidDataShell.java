@@ -32,14 +32,14 @@ public class KidDataShell extends AppCompatActivity {
         dni = findViewById(R.id.shell_dni);
         String dni_text = String.valueOf(kid.getDni());
         class_text = findViewById(R.id.shell_class);
-        class_text.setText("Año clase: " +kid.getClassRoom().getClassYear());
+        class_text.setText("Año clase: " + (int) kid.getClassRoom().getClassYear());
         dni.setText("Cédula: " + dni_text);
         test = findViewById(R.id.shell_test);
         test.setText("Prueba: " +kid.getForm().getName());
         status = findViewById(R.id.shell_status);
         status.setText("Estado: " + kid.getStatus());
         birthday = findViewById(R.id.shell_birthday);
-        birthday.setText("Fecha de Nacimiento: " + kid.getDob());
+        birthday.setText("Fecha de Nacimiento: " + (kid.getDob().split("T"))[0]);
         dialog = new Dialog(this);
     }
 

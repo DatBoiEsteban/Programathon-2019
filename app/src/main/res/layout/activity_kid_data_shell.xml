@@ -118,7 +118,7 @@
         android:layout_marginBottom="24dp"
         android:background="@drawable/login_button"
         android:paddingVertical="12dp"
-        android:text="Ver listas de registros de Tests ASQ-3"
+        android:text="Histórico de resultados ASQ-3"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
