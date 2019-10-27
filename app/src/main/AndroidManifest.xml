@@ -3,6 +3,9 @@
     package="com.stardust.programathon2019">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -12,10 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShellProfile"></activity>
-        <activity android:name=".KidDataShell"></activity>
-        <activity android:name=".KidsListActivity" />
-
+        <activity android:name=".ResultsList"></activity>
+        <activity
+            android:name=".KidDataShell"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".KidsList"
             android:label="@string/title_activity_kids_list"
@@ -31,11 +34,5 @@
             </intent-filter>
         </activity>
     </application>
-
-
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>
