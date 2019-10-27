@@ -75,6 +75,7 @@ public class Kid {
             long months =  ChronoUnit.MONTHS.between(ldateOfBirth,ltoday);
             long days =  ChronoUnit.DAYS.between(ldateOfBirth.plusMonths(months),ltoday);
 
+            result = TestName(months,days);
 
         } catch (ParseException e) {
             e.printStackTrace();
