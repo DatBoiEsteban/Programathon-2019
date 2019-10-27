@@ -27,6 +27,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/background_light"
+            android:contentDescription="TODO"
+            android:onClick="showPopUp"
             tools:src="@drawable/ic_back_header" />
 
     </androidx.appcompat.widget.Toolbar>
