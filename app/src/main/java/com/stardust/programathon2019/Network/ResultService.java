@@ -1,5 +1,6 @@
 package com.stardust.programathon2019.Network;
 
+import com.stardust.programathon2019.Model.AttendanceResult;
 import com.stardust.programathon2019.Model.ResultASQ;
 
 import java.util.List;
@@ -16,5 +17,7 @@ public interface ResultService {
     @GET("/ApiServer/api/Result/GetResultByAttendanceId")
     Call<ResponseBody> GetResultByAttendanceId(@Query("attendanceId") Integer attendanceId);
     @POST("/ApiServer/api/Result/updateResult")
-    Call<ResponseBody> updateResult(@Body List<ResultASQ> results);
+    Call<ResponseBody> updateResults(@Body List<ResultASQ> results);
+    @POST("/ApiServer/api/Result/addResults")
+    Call<ResponseBody> addResults(@Body AttendanceResult results);
 }
