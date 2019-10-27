@@ -1,8 +1,8 @@
 package com.stardust.programathon2019;
 
+import android.content.Context;
 import android.app.Activity;
 import android.app.DatePickerDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.app.Dialog;
 import android.graphics.Color;
@@ -22,6 +22,7 @@ import com.stardust.programathon2019.Controller.SessionManager;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.os.Debug;
 import android.text.InputType;
 import android.view.Gravity;
 import android.view.View;
@@ -31,19 +32,26 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Pattern;
+import java.util.Map;
 
 public class KidsList extends AppCompatActivity implements AwaitableResponse {
     private KidsList instance = this;
     private TableLayout table;
+    private ImageButton back_button;
+    private Button consult_button;
+    private Context ctx;
     private ImageButton backButton;
     private Kid currentKid;
     private Attendance attendance;
@@ -76,8 +84,10 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
         setSupportActionBar(toolbar);
         StudentController.getMyStudents(this);
         table = findViewById(R.id.kidstable);
-        backButton = findViewById(R.id.back_button);
+        back_button = findViewById(R.id.back_button);
         dialog = new Dialog(this);
+
+        ctx = getBaseContext();
     }
 
     @Override
@@ -198,9 +208,10 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
     }
 
     private void updateTable(Kid[] kids) {
-        for (Kid kid : kids) {
+
+        for (final Kid kid : kids) {
             final TableRow row = new TableRow(this);
-            TextView kid_name = new TextView(this);
+            final TextView kid_name = new TextView(this);
             kid_name.setText(kid.getFirstName() + " " + kid.getLastName());
             kid_name.setTextSize(18);
             kid_name.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -210,18 +221,28 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
             test_name.setTextSize(18);
             test_name.setGravity(Gravity.CENTER_HORIZONTAL);
             test_name.setCompoundDrawablePadding(4);
+            kid_name.setClickable(true);
+
+            kid_name.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (view == kid_name) {
+                            SessionManager.getInstance().getSession().store("kid_map", kid);
+                            Intent intent;
+                            intent = new Intent(view.getContext(), KidDataShell.class);
+                            startActivity(intent);
+                        }
+                    }
+            });
+
             row.addView(kid_name);
             row.addView(test_name);
             row.setBackground(getDrawable(R.drawable.table_format));
-            row.setClickable(true);
 
-            row.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                }
-            });
             table.addView(row);
         }
+
+
     }
 
     public void showKidResult(Kid kid){
@@ -237,10 +258,12 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
 
     @Override
     public void onComplete(Object obj) {
-        if (obj == null) {
+        Kid[] kids = (Kid[]) obj;
+        if (kids == null ||  kids.length==0) {
+            System.out.println("No kids");
+            Toast.makeText(ctx, "No se encontraron niños asociados a este usuario", Toast.LENGTH_SHORT).show();
             return;
         }
-        Kid[] kids = (Kid[])obj;
 
         updateTable(kids);
     }

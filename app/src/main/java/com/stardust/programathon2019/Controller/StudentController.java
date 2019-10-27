@@ -32,11 +32,15 @@ public class StudentController {
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                //System.out.println("Yeeeeeeeeeeeeeeeeaeeeeeeeeeeeeeeeeeeeeeaaaaaa");
                 ObjectMapper objectMapper = new ObjectMapper();
                 try {
                     //System.out.println("-------------------------------------------------------");
                     System.out.println(response.body());
-                    if(response.body() == null) return;
+                    if(response.body() == null) {
+                        callback.onComplete(null);
+                        return;
+                    }
 
                     Kid[] entity = objectMapper.readValue(response.body().string(), Kid[].class);
                     callback.onComplete(entity);
@@ -44,14 +48,18 @@ public class StudentController {
                     //System.out.println("------------------------******-----------------------------");
                     //session.setLogged(true);
                     //session.setLogin(entity);
+
                 } catch (IOException e) {
+
                     e.printStackTrace();
                     callback.onComplete(null);
                 }
+
                 //callback.onComplete();
             }
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
+                System.out.println("Yeeeeeeeeeeeeeeeeaeeeeeeeeeeeeeeeeeeeeeaaaaaa");
                 // something went completely south (like no internet connection)
                 Log.d("Error", t.getMessage());
                 //callback.onComplete();

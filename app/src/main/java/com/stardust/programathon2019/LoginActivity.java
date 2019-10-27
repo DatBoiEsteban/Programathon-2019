@@ -104,7 +104,7 @@ public class LoginActivity extends AppCompatActivity implements Awaitable {
     public void onComplete() {
         Session session = SessionManager.getInstance().getSession();
         if (session.isLogged()) {
-            Toast.makeText(this, "inicio sesion", Toast.LENGTH_SHORT).show();
+            // Toast.makeText(this, "inicio sesion", Toast.LENGTH_SHORT).show();
             Intent log = new Intent(this, KidsList.class);
             startActivity(log);
         } else {

@@ -13,6 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ShellProfile"></activity>
+        <activity android:name=".KidDataShell"></activity>
+        <activity android:name=".KidsListActivity" />
 
         <activity
             android:name=".KidsList"

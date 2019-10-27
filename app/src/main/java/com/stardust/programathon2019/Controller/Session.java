@@ -4,12 +4,15 @@ import android.util.Log;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.stardust.programathon2019.Model.Awaitable;
+import com.stardust.programathon2019.Model.Kid;
 import com.stardust.programathon2019.Model.LoginRequest;
 import com.stardust.programathon2019.Model.LoginResult;
 import com.stardust.programathon2019.Model.UserInfo;
 import com.stardust.programathon2019.Network.SessionService;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -21,8 +24,10 @@ public class Session {
     private String token;
     private LoginResult login;
 
-    public Session() {
+    static Map<String, Object> session_storage;
 
+    public Session() {
+        session_storage = new HashMap<>();
     }
 
 
@@ -94,5 +99,13 @@ public class Session {
 
         this.login = login;
         this.token = login.getAccess_token();
+    }
+
+    public void store(String key, Object value) {
+        session_storage.put(key, value);
+    }
+
+    public Object retrieve(String key) {
+        return session_storage.get(key);
     }
 }
