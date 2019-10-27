@@ -1,16 +1,46 @@
 package com.stardust.programathon2019.Model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.Date;
+import java.util.Map;
 
 public class Kid {
-    private String name;
-    private Date birthDate;
+    String dob;
+    String joinDate;
+    int earlyBirthAmount;
+    int sponsorId;
+    ClassRoom classRoom;
+    Form form;
+    int id;
+    int dni;
+    String firstName;
+    String lastName;
+    String gender;
+    int locationId;
+    String status;
 
-    public String getName() {
-        return name;
+    @JsonProperty("form")
+    private void unpackForm(Map<String,Object> form) {
+        int id = (Integer)form.get("id");
+        String name = (String)form.get("name");
+        boolean applied = (Boolean)form.get("applied");
+        this.form = new Form(id, name, applied);
+
     }
 
-    public void setName(String name) {
-        this.name = name;
+    @JsonProperty("classRoom")
+    private void unpackClassRoom(Map<String,Object> classRoom) {
+        int id = (Integer)classRoom.get("id");
+        int classYear = (Integer)classRoom.get("classYear");
+        String section = (String)classRoom.get("section");
+        int status = (Integer)classRoom.get("status");
+        int gradeId = (Integer)classRoom.get("gradeId");
+        int teacherId = (Integer)classRoom.get("teacherId");
+
+        this.classRoom = new ClassRoom(id,classYear,section,status,gradeId,teacherId);
+
     }
+
+    
 }

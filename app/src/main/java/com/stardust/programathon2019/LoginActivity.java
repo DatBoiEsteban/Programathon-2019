@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.google.android.material.textfield.TextInputLayout;
 import com.stardust.programathon2019.Controller.Session;
 import com.stardust.programathon2019.Controller.SessionManager;
+import com.stardust.programathon2019.Controller.StudentController;
 import com.stardust.programathon2019.Model.Awaitable;
 
 import java.util.regex.Pattern;
@@ -72,6 +73,8 @@ public class LoginActivity extends AppCompatActivity implements Awaitable {
             password_entry.setError(null);
             return true;
         }
+
+
     }
 
     public void confirmInput(View v) {
@@ -98,5 +101,8 @@ public class LoginActivity extends AppCompatActivity implements Awaitable {
         } else {
             Toast.makeText(this, "El usuario o contraseña son incorrectos", Toast.LENGTH_SHORT).show();
         }
+
+        //test get students
+        StudentController.getMyStudents();
     }
 }

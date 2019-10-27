@@ -27,7 +27,7 @@ public class LoginResult {
     @SuppressWarnings("unchecked")
     @JsonProperty("UserInfo")
     private void unpackUserInfo(Map<String,Object> UserInfo) {
-        String givenName  = (String)UserInfo.get("givenName");
+          String givenName  = (String)UserInfo.get("givenName");
         String email  = (String)UserInfo.get("email");
         int uid  = (Integer)UserInfo.get("uid");
         String role  = (String)UserInfo.get("role");
