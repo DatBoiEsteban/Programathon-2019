@@ -28,7 +28,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/query_by_kid_name_input" />
+            android:hint="@string/query_by_kid_name_input"
+            android:inputType="number" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -46,8 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dip"
         android:autofillHints=""
-        android:ems="10"
-        android:inputType="date" />
+        android:ems="10" />
 
     <Button
         android:id="@+id/query_by_name_consult_button"

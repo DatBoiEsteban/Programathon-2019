@@ -28,7 +28,7 @@
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/query_by_name_dni_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dip"
@@ -44,7 +44,7 @@
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/query_by_name_date_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dip"
@@ -60,7 +60,7 @@
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/query_by_name_asq3_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dip"
