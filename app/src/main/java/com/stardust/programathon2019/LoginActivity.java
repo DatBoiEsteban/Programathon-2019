@@ -82,7 +82,6 @@ public class LoginActivity extends AppCompatActivity implements Awaitable {
             return;
         }
         String username = id_entry.getEditText().getText().toString();
-        username="1111";
         String password = password_entry.getEditText().getText().toString();
         Session session = SessionManager.getInstance().getSession();
         session.login(username,password,this);
