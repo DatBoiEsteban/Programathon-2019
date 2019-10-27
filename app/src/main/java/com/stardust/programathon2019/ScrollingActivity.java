@@ -1,9 +1,16 @@
 package com.stardust.programathon2019;
 
 import android.os.Bundle;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.gson.Gson;
 import com.stardust.programathon2019.Controller.ServiceGenerator;
+import com.stardust.programathon2019.Controller.Session;
+import com.stardust.programathon2019.Controller.SessionManager;
+import com.stardust.programathon2019.Model.LoginRequest;
+import com.stardust.programathon2019.Model.LoginResult;
 import com.stardust.programathon2019.Model.TempUser;
 import com.stardust.programathon2019.Network.SessionService;
 
@@ -15,6 +22,10 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.io.IOException;
+import java.util.HashMap;
+
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -32,26 +43,11 @@ public class ScrollingActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SessionService service = ServiceGenerator.createService(SessionService.class, "1111", "Te$t1234");
-                Call<TempUser> call = service.login();
-                call.enqueue(new Callback<TempUser>() {
-                    @Override
-                    public void onResponse(Call<TempUser> call, Response<TempUser> response) {
-                        if (response.isSuccessful()) {
-                            // user object available
-                            System.out.println("HARD");
-                        } else {
-                            // error response, no access to resource?
-                            System.out.println("Se despicho tere");
-                        }
-                    }
 
-                    @Override
-                    public void onFailure(Call<TempUser> call, Throwable t) {
-                        // something went completely south (like no internet connection)
-                        Log.d("Error", t.getMessage());
-                    }
-                });
+                //code required for login
+                Session session = SessionManager.getInstance().getSession();
+                System.out.println(session.login("1111","Te$t1234"));
+
             }
         });
 

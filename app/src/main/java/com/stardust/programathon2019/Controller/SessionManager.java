@@ -1,18 +1,24 @@
 package com.stardust.programathon2019.Controller;
 
-class SessionManager {
-    private static final SessionManager instance = new SessionManager();
+public class SessionManager {
+    private static  SessionManager instance = new SessionManager();
     private Session session;
 
-    static SessionManager getInstance() {
+
+    private SessionManager() {
+        session = new Session();
+    }
+
+
+    public static SessionManager getInstance()
+    {
+        if (instance == null)
+            instance = new SessionManager();
+
         return instance;
     }
 
-    private SessionManager() {
-    }
-
-    public void createSesion(String User, String password) {
-        session = new Session();
-        session.login(User,password);
+    public Session getSession() {
+        return session;
     }
 }

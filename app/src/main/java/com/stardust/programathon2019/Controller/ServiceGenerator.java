@@ -6,6 +6,7 @@ import com.stardust.programathon2019.Model.Consts;
 
 import okhttp3.Credentials;
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -36,14 +37,25 @@ public class ServiceGenerator {
     }
 
     public static <S> S createService(Class<S> serviceClass, final String authToken) {
+        HeaderInterceptor headerInterceptor = new HeaderInterceptor();
+
+        //add header to request
+        if (!httpClient.interceptors().contains(headerInterceptor)) {
+            builder.client(httpClient.build());
+            retrofit = builder.build();
+        }
+
         if (!TextUtils.isEmpty(authToken)) {
             AuthenticationInterceptor interceptor = new AuthenticationInterceptor(authToken);
+
+
             if (!httpClient.interceptors().contains(interceptor)) {
                 httpClient.addInterceptor(interceptor);
                 builder.client(httpClient.build());
                 retrofit = builder.build();
             }
         }
+
         return retrofit.create(serviceClass);
     }
 }
