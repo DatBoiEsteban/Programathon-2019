@@ -45,6 +45,11 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
         dialog = new Dialog(this);
     }
 
+    @Override
+    public void onBackPressed() {
+        showPopUp(this.getCurrentFocus());
+    }
+
     public void showPopUp(View v) {
         dialog.setContentView(R.layout.log_out_pop_up);
         Button btnClose = dialog.findViewById(R.id.log_out_accept_button);
