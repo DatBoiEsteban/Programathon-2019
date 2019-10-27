@@ -60,9 +60,7 @@
                 android:paddingVertical="@dimen/table_padding_h"
                 android:text="@string/table_01"
                 android:textSize="@dimen/table_size" />
-
         </TableRow>
-
     </TableLayout>
 
     <Button
@@ -74,6 +72,5 @@
         android:background="@drawable/login_button"
         android:text="Consultar el formulario ASQ-3"
         android:textColor="#ffffff"/>
-
 
 </LinearLayout>
