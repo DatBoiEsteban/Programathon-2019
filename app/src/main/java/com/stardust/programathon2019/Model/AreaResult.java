@@ -8,17 +8,17 @@ import java.util.List;
 public class AreaResult {
     int areaId;
 
-    List<ResultASQ> results;
+    List<Result> results;
 
     public AreaResult() {
     }
 
-    public AreaResult(int areaId, List<ResultASQ> results) {
+    public AreaResult(int areaId, List<Result> results) {
         this.areaId = areaId;
         this.results = results;
     }
 
-    public List<ResultASQ> getResults() {
+    public List<Result> getResults() {
         return results;
     }
 

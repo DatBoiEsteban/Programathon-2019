@@ -447,7 +447,8 @@
                     <Button
                         android:id="@+id/lista_resultados_limite_0"
                         android:layout_width="50dp"
-                        android:layout_height="40dp" />
+                        android:layout_height="40dp"
+                        android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/lista_resultados_puntaje_0"
@@ -468,7 +469,8 @@
                     <Button
                         android:id="@+id/lista_resultados_limite_1"
                         android:layout_width="50dp"
-                        android:layout_height="40dp" />
+                        android:layout_height="40dp"
+                        android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/lista_resultados_puntaje_1"
@@ -489,7 +491,8 @@
                     <Button
                         android:id="@+id/lista_resultados_limite_2"
                         android:layout_width="50dp"
-                        android:layout_height="40dp" />
+                        android:layout_height="40dp"
+                        android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/lista_resultados_puntaje_2"
@@ -510,7 +513,8 @@
                     <Button
                         android:id="@+id/lista_resultados_limite_3"
                         android:layout_width="50dp"
-                        android:layout_height="40dp" />
+                        android:layout_height="40dp"
+                        android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/lista_resultados_puntaje_3"
@@ -531,7 +535,8 @@
                     <Button
                         android:id="@+id/lista_resultados_limite_4"
                         android:layout_width="50dp"
-                        android:layout_height="40dp" />
+                        android:layout_height="40dp"
+                        android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/lista_resultados_puntaje_4"
