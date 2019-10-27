@@ -6,11 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.stardust.programathon2019.Controller.AttendanceController;
+import com.stardust.programathon2019.Controller.Session;
 import com.stardust.programathon2019.Controller.SessionManager;
+import com.stardust.programathon2019.Model.AttendanceResult;
+import com.stardust.programathon2019.Model.AwaitableResponse;
 import com.stardust.programathon2019.Model.Kid;
 
-public class HistoryActivity extends AppCompatActivity {
-    TextView name, test, date;
+public class HistoryActivity extends AppCompatActivity implements AwaitableResponse {
+    TextView name, test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +27,19 @@ public class HistoryActivity extends AppCompatActivity {
         name.setText(kid.getFirstName() + " " + kid.getLastName());
         test = findViewById(R.id.history_test);
         test.setText("Prueba: " + kid.getForm().getName());
+
+        AttendanceController.getAttendanceByStudentId(kid.getId(), this);
     }
 
     public void goBack(View view) {
         finish();
+    }
+
+    @Override
+    public void onComplete(Object obj) {
+        AttendanceResult result = (AttendanceResult)obj;
+        result.getResultList();
+
+
     }
 }
