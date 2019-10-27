@@ -21,4 +21,15 @@
     <string name="kidslist_title">NIÑOS DEL CENTRO</string>
     <string name="table_00">Nombre</string>
     <string name="table_01">ASQ-3</string>
+
+    --> Login
+    <string name="LogoDescription">Dehvi Logo</string>
+    <string name="DNI_input">Cédula</string>
+    <string name="password_input">Contraseña</string>
+    <string name="login_button_text">Ingresar</string>
+
+    -->
+    <string name="log_out_message">¿Desea salir de la aplicación?</string>
+    <string name="log_out_accept">Aceptar</string>
+    <string name="log_out_deny">Cancelar</string>
 </resources>

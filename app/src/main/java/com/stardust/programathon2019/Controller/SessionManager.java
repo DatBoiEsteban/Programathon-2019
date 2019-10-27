@@ -21,4 +21,8 @@ public class SessionManager {
     public Session getSession() {
         return session;
     }
+
+    public void endSession(){
+        session = new Session();
+    }
 }
