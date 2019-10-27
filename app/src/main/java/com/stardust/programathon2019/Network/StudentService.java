@@ -21,7 +21,7 @@ public interface StudentService {
     Call<ResponseBody> GetByClassName();
 
     @GET("/ApiServer/api/Student/GetByDNI")
-    Call<ResponseBody> GetByDNI();
+    Call<ResponseBody> GetByDNI(@Query("dni") Integer dni);
 
     @POST("/ApiServer/api/Student/GetMyStudent")
     Call<ResponseBody> AddStudent();
