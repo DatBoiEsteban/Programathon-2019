@@ -18,7 +18,6 @@ import retrofit2.Response;
 
 public class Session {
     private boolean logged;
-    private boolean connected;
     private String token;
     private LoginResult login;
 
@@ -40,7 +39,6 @@ public class Session {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 ObjectMapper objectMapper = new ObjectMapper();
                 try {
-                    session.setConnected(true);
                     if(response.body() == null) {
                         callback.onComplete();
                         return;
@@ -60,7 +58,6 @@ public class Session {
                 // something went completely south (like no internet connection)
                 Log.d("Error", t.getMessage());
                 session.setLogged(false);
-                session.setConnected(false);
                 callback.onComplete();
 
             }
@@ -78,14 +75,6 @@ public class Session {
         else
             return ServiceGenerator.createService(serviceClass);
 
-    }
-
-    public boolean isConnected() {
-        return connected;
-    }
-
-    public void setConnected(boolean connected) {
-        this.connected = connected;
     }
 
     public boolean isLogged() {
