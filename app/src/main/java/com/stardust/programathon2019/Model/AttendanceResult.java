@@ -8,9 +8,29 @@ import java.util.List;
 public class AttendanceResult {
 
     int attendanceId;
-    List<AreaResult> resultList;
+    List<AreaResultASQ> resultList;
 
-    public List<AreaResult> getResultList() {
+    public AttendanceResult() {
+    }
+
+    public AttendanceResult(int attendanceId, List<AreaResultASQ> resultList) {
+        this.attendanceId = attendanceId;
+        this.resultList = resultList;
+    }
+
+    public List<AreaResultASQ> getResultList() {
         return resultList;
+    }
+
+    public int getAttendanceId() {
+        return attendanceId;
+    }
+
+    public void setAttendanceId(int attendanceId) {
+        this.attendanceId = attendanceId;
+    }
+
+    public void setResultList(List<AreaResultASQ> resultList) {
+        this.resultList = resultList;
     }
 }

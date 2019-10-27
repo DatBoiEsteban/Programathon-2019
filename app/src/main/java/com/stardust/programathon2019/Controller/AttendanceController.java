@@ -63,26 +63,44 @@ public class AttendanceController {
     }
 
 
-    public static void addAttendance(AttendanceRequest attendance, Awaitable awt) {
+    public static void addAttendance(AttendanceRequest attendance, AwaitableResponse awt) {
         final Session session = SessionManager.getInstance().getSession();
-        //final AwaitableResponse callback  = awt;
+        final AwaitableResponse callback  = awt;
 
 
         AttendaceService service = session.createService(AttendaceService.class);
         Call<ResponseBody> call = service.addAttendance(attendance);
-        final Awaitable callback = awt;
+        //System.out.println(call.request().body());
+        //System.out.println(call.request().body().toString());
+        //final Awaitable callback = awt;
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                if(response.body() == null){
+                    callback.onComplete(null);
+
+                    return;
+                }
+
+                ObjectMapper objectMapper = new ObjectMapper();
                 System.out.println(response.isSuccessful());
-                callback.onComplete();
+                System.out.println(response.message());
+                Integer entity = null;
+                try {
+                    entity = objectMapper.readValue(response.body().string(), Integer.class);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                callback.onComplete(entity);
+                //System.out.println(call.;
             }
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 // something went completely south (like no internet connection)
                 Log.d("Error", t.getMessage());
                 //callback.onComplete();
-                callback.onComplete();
+                callback.onComplete(null);
 
             }
         });

@@ -105,6 +105,12 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        //StudentController.getMyStudents(this);
+    }
+
+    @Override
     public void onBackPressed() {
         showPopUp(this.getCurrentFocus());
     }
@@ -169,9 +175,10 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
                             @Override
                             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                                 getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-                                eText.setText(date.toString());
+
                                 cldr.set(year, monthOfYear, dayOfMonth);
                                 date = cldr.getTime();
+                                eText.setText(date.toString());
                                 act.hideKeyboardFrom(view);
                             }
                         }, year, month, day);

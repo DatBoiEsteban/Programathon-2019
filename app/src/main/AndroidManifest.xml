@@ -16,6 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ResultsList"></activity>
+        <activity android:name=".RegisterASQ"></activity>
         <activity
             android:name=".KidDataShell"
             android:theme="@style/AppTheme.NoActionBar" />

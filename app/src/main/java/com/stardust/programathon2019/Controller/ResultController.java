@@ -2,6 +2,7 @@ package com.stardust.programathon2019.Controller;
 
 import android.util.Log;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.stardust.programathon2019.Model.AreaResult;
 import com.stardust.programathon2019.Model.Attendance;
@@ -70,8 +71,15 @@ public class ResultController {
 
     public static void addResult(AttendanceResult newResult, AwaitableResponse awt){
         final Session session = SessionManager.getInstance().getSession();
-        //final AwaitableResponse callback  = awt;
+        final AwaitableResponse callback  = awt;
+        final ObjectMapper objectMapper = new ObjectMapper();
 
+        try {
+            String jsonStr = objectMapper.writeValueAsString(newResult);
+            System.out.println( jsonStr);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
 
         ResultService service = session.createService(ResultService.class);
         Call<ResponseBody> call = service.addResults(newResult);
@@ -79,16 +87,29 @@ public class ResultController {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 System.out.println(response.isSuccessful());
+                System.out.println(response.message());
+                if(response.body() == null) {
+                    callback.onComplete(null);
+                    return;
+                }
 
-                    System.out.println(response.message());
+                Integer entity = null;
+                try {
+                    entity = objectMapper.readValue(response.body().string(), Integer.class);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                System.out.println(response.message());
+                callback.onComplete(entity);
 
             }
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 // something went completely south (like no internet connection)
                 Log.d("Error", t.getMessage());
+
                 //callback.onComplete();
-                //callback.onComplete(null);
+                callback.onComplete(null);
 
             }
         });

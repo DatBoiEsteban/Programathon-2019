@@ -9,6 +9,7 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
@@ -18,6 +19,8 @@ public interface ResultService {
     Call<ResponseBody> GetResultByAttendanceId(@Query("attendanceId") Integer attendanceId);
     @POST("/ApiServer/api/Result/updateResult")
     Call<ResponseBody> updateResults(@Body List<ResultASQ> results);
-    @POST("/ApiServer/api/Result/addResults")
+
+    @Headers("Content-Type:application/json-patch+json")
+    @POST("/ApiServer/api/Result/AddResults")
     Call<ResponseBody> addResults(@Body AttendanceResult results);
 }

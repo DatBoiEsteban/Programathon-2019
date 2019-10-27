@@ -13,7 +13,7 @@
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
-        android:layout_height="100"
+        android:layout_height="100dp"
         android:gravity="center_vertical"
         android:text="@string/questionaire_Title"
         android:textAlignment="center"

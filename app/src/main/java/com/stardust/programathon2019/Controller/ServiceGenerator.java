@@ -7,6 +7,7 @@ import com.stardust.programathon2019.Model.Consts;
 import okhttp3.Credentials;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -38,6 +39,9 @@ public class ServiceGenerator {
 
     public static <S> S createService(Class<S> serviceClass, final String authToken) {
         HeaderInterceptor headerInterceptor = new HeaderInterceptor();
+        //HttpLoggingInterceptor logint = new HttpLoggingInterceptor();
+
+
 
         //add header to request
         if (!httpClient.interceptors().contains(headerInterceptor)) {
@@ -51,10 +55,15 @@ public class ServiceGenerator {
 
             if (!httpClient.interceptors().contains(interceptor)) {
                 httpClient.addInterceptor(interceptor);
+                //httpClient.addInterceptor(logint);
                 builder.client(httpClient.build());
                 retrofit = builder.build();
             }
         }
+
+
+
+
 
         return retrofit.create(serviceClass);
     }

@@ -2,23 +2,40 @@ package com.stardust.programathon2019;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.stardust.programathon2019.Controller.SessionManager;
 import com.stardust.programathon2019.Model.Kid;
 
+import java.util.Calendar;
+import java.util.Date;
+
 public class KidDataShell extends AppCompatActivity {
     TextView name, dni, class_text, test, status, birthday;
     private Dialog dialog;
+    public Button registerButtn;
+    private Date date= new Date();
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        SessionManager.getInstance().getSession().store("registerDate", new Date());
+        //StudentController.getMyStudents(this);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +58,60 @@ public class KidDataShell extends AppCompatActivity {
         birthday = findViewById(R.id.shell_birthday);
         birthday.setText("Fecha de Nacimiento: " + kid.getDob());
         dialog = new Dialog(this);
+        final KidDataShell act = this;
+        registerButtn = findViewById(R.id.register_button_kid_shell);
+        registerButtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               showPopUP();
+            }
+        });
+
+    }
+
+    private void showPopUP() {
+        dialog.setContentView(R.layout.pop_up_register_asq);
+        final Button dater = dialog.findViewById(R.id.register_date_selector);
+        dater.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                final Calendar cldr = Calendar.getInstance();
+                int day = cldr.get(Calendar.DAY_OF_MONTH);
+                int month = cldr.get(Calendar.MONTH);
+                int year = cldr.get(Calendar.YEAR);
+                // date picker dialog
+                final Context ctx = v.getContext();
+
+
+                DatePickerDialog picker = new DatePickerDialog(ctx,
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                                getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
+                                cldr.set(year, monthOfYear, dayOfMonth);
+                                date = cldr.getTime();
+                                //act.hideKeyboardFrom(view);
+                                dater.setText(date.toString());
+                                SessionManager.getInstance().getSession().store("registerDate", date);
+                            }
+                        }, year, month, day);
+
+                picker.show();
+            }
+        });
+        dater.setText(date.toString());
+
+        Button continuar = dialog.findViewById(R.id.register_continue_button);
+        continuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent log = new Intent(getApplicationContext(), RegisterASQ.class);
+                startActivity(log);
+            }
+        });
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
     }
 
     public void goBack(View view) {

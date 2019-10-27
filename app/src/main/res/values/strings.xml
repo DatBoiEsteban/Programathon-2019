@@ -57,4 +57,11 @@
     --> Questionaire
     <string name="questionaire_Title">Lista de resultados ASQ-3</string>
     <string name="questionaire_table_title">Test ASQ-3 realizados</string>
+
+
+    --> Register ASQ
+    <string name="register_asq_title">Fecha de apliacion</string>
+    <string name="register_asq_button_message">Continuar</string>
+    <string name="save_asq_message">Guardar</string>
+
 </resources>
