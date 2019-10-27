@@ -2,6 +2,7 @@ package com.stardust.programathon2019;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,9 +25,9 @@ public class LoginActivity extends AppCompatActivity implements Awaitable {
     private TextInputLayout password_entry;
     private Button login_button;
     private static final Pattern ID_PATTERN =
-            Pattern.compile("^[0-9]{9,10}$");
+            Pattern.compile("^[0-9]{1,10}$");
     private static final Pattern PASSWORD_PATTERN =
-            Pattern.compile("^.{8,10}$");
+            Pattern.compile("^.{1,10}$");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +96,8 @@ public class LoginActivity extends AppCompatActivity implements Awaitable {
         boolean logged = session.isLogged();
         if (logged) {
             Toast.makeText(this, "inicio sesion", Toast.LENGTH_SHORT).show();
+            Intent log = new Intent(this, KidsList.class);
+            startActivity(log);
         } else {
             Toast.makeText(this, "El usuario o contraseña son incorrectos", Toast.LENGTH_SHORT).show();
         }
