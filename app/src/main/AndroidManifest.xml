@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResultsList"></activity>
+        <activity android:name=".HistoryActivity"></activity>
+        <activity android:name=".ResultsList" />
         <activity
             android:name=".KidDataShell"
             android:theme="@style/AppTheme.NoActionBar" />
