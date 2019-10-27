@@ -101,7 +101,8 @@ public class LoginActivity extends AppCompatActivity implements Awaitable {
         } else {
             Toast.makeText(this, "Esta aplicación ocupa una conección a internet para funcionar", Toast.LENGTH_LONG).show();
         }
+        StudentController.getStudentByName("Martin");
 
-        
     }
+
 }
