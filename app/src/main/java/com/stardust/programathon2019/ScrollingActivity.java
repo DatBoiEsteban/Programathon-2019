@@ -45,8 +45,7 @@ public class ScrollingActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 //code required for login
-                Session session = SessionManager.getInstance().getSession();
-                System.out.println(session.login("1111","Te$t1234"));
+
 
             }
         });

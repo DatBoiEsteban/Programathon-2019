@@ -3,6 +3,7 @@ package com.stardust.programathon2019.Controller;
 import android.util.Log;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.stardust.programathon2019.Model.Awaitable;
 import com.stardust.programathon2019.Model.LoginRequest;
 import com.stardust.programathon2019.Model.LoginResult;
 import com.stardust.programathon2019.Network.SessionService;
@@ -24,8 +25,8 @@ public class Session {
 
 
 
-    public boolean login(String username, String password) {
-
+    public void login(String username, String password, Awaitable cl) {
+        final Awaitable callback = cl;
         final Session session = this;
 
         SessionService service = ServiceGenerator.createService(SessionService.class);
@@ -39,22 +40,25 @@ public class Session {
                     if(response.body() == null) return;
 
                     LoginResult entity = objectMapper.readValue(response.body().string(), LoginResult.class);
-                    //System.out.println(entity.getAccess_token());
+                    System.out.println(entity.getAccess_token());
                     session.setLogged(true);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+                callback.onComplete();
             }
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 // something went completely south (like no internet connection)
                 Log.d("Error", t.getMessage());
                 session.setLogged(false);
+                callback.onComplete();
 
             }
         });
 
-        return logged;
+
+
     }
 
 
