@@ -10,4 +10,8 @@ public class Form {
         this.name = name;
         this.applied = applied;
     }
+
+    public String getName() {
+        return name;
+    }
 }

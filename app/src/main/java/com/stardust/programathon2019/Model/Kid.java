@@ -22,6 +22,7 @@ public class Kid {
     int locationId;
     String status;
 
+
     @JsonProperty("form")
     private void unpackForm(Map<String,Object> form) {
         int id = (Integer)form.get("id");
@@ -44,4 +45,55 @@ public class Kid {
 
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public String getJoinDate() {
+        return joinDate;
+    }
+
+    public int getEarlyBirthAmount() {
+        return earlyBirthAmount;
+    }
+
+    public int getSponsorId() {
+        return sponsorId;
+    }
+
+    public ClassRoom getClassRoom() {
+        return classRoom;
+    }
+
+    public Form getForm() {
+        return form;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public int getDni() {
+        return dni;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public int getLocationId() {
+        return locationId;
+    }
+
+    public String getStatus() {
+        return status;
+    }
 }

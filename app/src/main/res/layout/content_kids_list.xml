@@ -35,7 +35,7 @@
     <TableLayout
         android:id="@+id/kidstable"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginVertical="16dp">
 
@@ -64,5 +64,16 @@
         </TableRow>
 
     </TableLayout>
+
+    <Button
+        android:id="@+id/consult_button"
+        android:layout_width="266dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingVertical="12dp"
+        android:background="@drawable/login_button"
+        android:text="Consultar el formulario ASQ-3"
+        android:textColor="#ffffff"/>
+
 
 </LinearLayout>
