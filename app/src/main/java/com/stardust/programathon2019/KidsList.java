@@ -15,6 +15,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.stardust.programathon2019.Controller.AttendanceController;
 import com.stardust.programathon2019.Controller.ResultController;
 import com.stardust.programathon2019.Controller.StudentController;
+import com.stardust.programathon2019.Model.Area;
 import com.stardust.programathon2019.Model.Attendance;
 import com.stardust.programathon2019.Model.AwaitableResponse;
 import com.stardust.programathon2019.Model.Kid;
@@ -351,4 +352,5 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
 
 
     }
+
 }
