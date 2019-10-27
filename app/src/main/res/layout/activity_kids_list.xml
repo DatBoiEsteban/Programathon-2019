@@ -19,18 +19,15 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-
-        android:background="?attr/colorPrimary"
+        android:background="@android:color/background_light"
         app:popupTheme="@style/AppTheme.PopupOverlay">
 
         <ImageButton
             android:id="@+id/back_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <ImageButton
-            android:id="@+id/nav_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_light"
+            tools:src="@drawable/ic_back_header" />
 
     </androidx.appcompat.widget.Toolbar>
 
