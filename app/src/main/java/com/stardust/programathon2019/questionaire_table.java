@@ -1,6 +1,7 @@
 package com.stardust.programathon2019;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.Gravity;
@@ -64,7 +65,7 @@ public class questionaire_table extends AppCompatActivity implements AwaitableRe
             Toast.makeText(ctx, "Este usuario no ha realizado pruebas.", Toast.LENGTH_SHORT).show();
             finish();
         }
-        for (Attendance result: results) {
+        for (final Attendance result: results) {
             final TableRow row = new TableRow(this);
             final TextView testName = new TextView(this);
             testName.setText(result.getForm().getName());
@@ -74,7 +75,9 @@ public class questionaire_table extends AppCompatActivity implements AwaitableRe
             testName.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //TODO Manda los datos a su view Castri
+                    SessionManager.getInstance().getSession().store("AttendanceID", result);
+                    Intent log = new Intent(getApplicationContext(), ListaDeResultados.class);
+                    startActivity(log);
                 }
             });
             row.addView(testName);
