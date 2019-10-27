@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/log_out_pop_up"
     android:layout_width="350dp"
-    android:layout_height="200dp"
+    android:layout_height="350dp"
     android:layout_gravity="center"
     android:background="@android:color/white"
     android:orientation="vertical"
@@ -14,10 +14,39 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dip"
-        android:text="@string/log_out_message"
+        android:text="@string/query_by_kid_message"
         android:textColor="#FF000000"
         android:textSize="18sp"
         android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/query_by_kid_name_input" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:text="@string/query_by_kid_Date"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="date" />
 
     <Button
         android:id="@+id/log_out_accept_button"
@@ -31,20 +60,6 @@
         android:background="@drawable/login_button"
         android:text="@string/log_out_accept"
         android:textColor="#FFFFFF"
-        android:textSize="18sp" />
-
-    <Button
-        android:id="@+id/log_out_deny_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="10dip"
-        android:layout_marginTop="2.5dip"
-        android:layout_marginRight="10dip"
-        android:layout_marginBottom="2.5dip"
-        android:background="@drawable/login_button"
-        android:text="@string/log_out_deny"
-        android:textColor="@android:color/white"
         android:textSize="18sp" />
 
 </LinearLayout>
