@@ -104,6 +104,7 @@ public class StudentController {
         });
     }
 
+
     /**
      * @returns Kid[]
      */
@@ -145,5 +146,4 @@ public class StudentController {
             }
         });
     }
-
 }

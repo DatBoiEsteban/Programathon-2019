@@ -63,9 +63,10 @@ public class Kid {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public String getAsq3Test(Date compareDate){
-        DateFormat m_ISO8601Local = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+        DateFormat m_ISO8601Local = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
         String result = "";
         try {
+            System.out.println(dob);
 
             Date dateOfBirth= m_ISO8601Local.parse(dob);
             Date today = compareDate;
@@ -75,6 +76,7 @@ public class Kid {
 
             long months =  ChronoUnit.MONTHS.between(ldateOfBirth,ltoday);
             long days =  ChronoUnit.DAYS.between(ldateOfBirth.plusMonths(months),ltoday);
+            System.out.println(months + " " + days);
 
             result = TestName(months,days);
 
@@ -117,7 +119,7 @@ public class Kid {
             return "14 Meses ASQ-3";
         }else if(lowerLimit(11,0,months, days) && upperLimit(12, 30,months,days)){
             return "12 Meses ASQ-3";
-        }else if(lowerLimit(9,0,months, days) && upperLimit(10, 30,months,days)){
+        }else if(lowerLimit(10,0,months, days) && upperLimit(10, 30,months,days)){
             return "10 Meses ASQ-3";
         }else if(lowerLimit(9,0,months, days) && upperLimit(9, 30,months,days)){
             return "9 Meses ASQ-3";
@@ -137,10 +139,62 @@ public class Kid {
     }
 
     public boolean lowerLimit(int orMonths, int orDay, Long months, Long days){
-        return orMonths <= months  && orDay <= days;
+        return orMonths < months  || (orMonths==months && orDay <= days);
     }
 
     public boolean upperLimit(int orMonths, int orDay, Long months, Long days){
-        return orMonths >= months  && orDay >= days;
+        return orMonths > months  || (orMonths==months && orDay >= days);
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public String getJoinDate() {
+        return joinDate;
+    }
+
+    public int getEarlyBirthAmount() {
+        return earlyBirthAmount;
+    }
+
+    public int getSponsorId() {
+        return sponsorId;
+    }
+
+    public ClassRoom getClassRoom() {
+        return classRoom;
+    }
+
+    public Form getForm() {
+        return form;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public int getDni() {
+        return dni;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public int getLocationId() {
+        return locationId;
+    }
+
+    public String getStatus() {
+        return status;
     }
 }
