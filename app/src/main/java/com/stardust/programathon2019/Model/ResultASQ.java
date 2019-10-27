@@ -1,11 +1,17 @@
 package com.stardust.programathon2019.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 public class ResultASQ {
     int index;
+<<<<<<< HEAD
     int value;
     int id;
 
 
+=======
+    @JsonIgnoreProperties(ignoreUnknown = true)
+>>>>>>> 9950558565d02af2a2221c73fc634b4f43243efd
     public ResultASQ(int index) {
         this.index = index;
         id =0;
@@ -42,5 +48,13 @@ public class ResultASQ {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public int getIndex() {
+        return index;
     }
 }

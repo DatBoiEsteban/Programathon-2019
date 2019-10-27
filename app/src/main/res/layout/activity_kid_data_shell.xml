@@ -111,14 +111,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/load_tests_button"
+        android:id="@+id/load_tests_button_kids_shell"
         android:layout_width="296dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="24dp"
         android:background="@drawable/login_button"
         android:paddingVertical="12dp"
-        android:text="Ver listas de registros de Tests ASQ-3"
+        android:text="Histórico de resultados ASQ-3"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -126,7 +126,11 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
+<<<<<<< HEAD
         android:id="@+id/register_button_kid_shell"
+=======
+        android:id="@+id/register_button_kids_shell"
+>>>>>>> 9950558565d02af2a2221c73fc634b4f43243efd
         android:layout_width="296dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

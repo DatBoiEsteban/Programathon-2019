@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/back_button_results_list"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:background="@drawable/ic_back_header" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#64216D"
+        android:text="Lista de resultados ASQ-3"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lista_resultados_nombre_niño"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lista_resultados_meses_niño"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lista_resultados_nombre_prueba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lista_resultados_fecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:id="@+id/lista_resultados_tabla_calificaciones"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="clip_vertical">
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="54dp" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="54dp"
+                        android:layout_margin="5dp"
+                        android:text="Com." />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="54dp"
+                        android:layout_margin="5dp"
+                        android:text="Mo. Grue." />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="54dp"
+                        android:layout_margin="5dp"
+                        android:text="Mo. Fi." />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="54dp"
+                        android:layout_margin="5dp"
+                        android:text="So. Pro." />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="54dp"
+                        android:layout_margin="5dp"
+                        android:text="Indiv. Social." />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/asfa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1." />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_0_0"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_0_1"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_0_2"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_0_3"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_0_4"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/ags"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2." />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_1_0"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_1_1"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_1_2"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_1_3"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_1_4"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/yt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3." />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_2_0"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_2_1"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_2_2"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_2_3"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_2_4"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/pok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4." />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_3_0"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_3_1"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_3_2"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_3_3"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_3_4"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/iu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5." />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_4_0"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_4_1"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_4_2"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_4_3"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_4_4"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6." />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_5_0"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_5_1"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_5_2"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_5_3"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+
+                    <TextView
+                        android:id="@+id/lista_resultados_5_4"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_format" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Estado:"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="#A5C83E" />
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Encima del promedio" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="#FFFF00" />
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Dentro del promedio" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="#E90000" />
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Debajo del promedio" />
+
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView38"
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:text="Límite" />
+
+                    <TextView
+                        android:id="@+id/textView39"
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:text="Puntaje" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <Button
+                        android:id="@+id/lista_resultados_limite_0"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp" />
+
+                    <Button
+                        android:id="@+id/lista_resultados_puntaje_0"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Comunicación" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <Button
+                        android:id="@+id/lista_resultados_limite_1"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp" />
+
+                    <Button
+                        android:id="@+id/lista_resultados_puntaje_1"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/textView41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Motora Fina" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <Button
+                        android:id="@+id/lista_resultados_limite_2"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp" />
+
+                    <Button
+                        android:id="@+id/lista_resultados_puntaje_2"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/textView42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Motora Gruesa" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <Button
+                        android:id="@+id/lista_resultados_limite_3"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp" />
+
+                    <Button
+                        android:id="@+id/lista_resultados_puntaje_3"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/textView43"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Solucion de problemas" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <Button
+                        android:id="@+id/lista_resultados_limite_4"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp" />
+
+                    <Button
+                        android:id="@+id/lista_resultados_puntaje_4"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/textView44"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Social / individual" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/lista_resultados_boton_editar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_button"
+                    android:text="Editar"
+                    android:textColor="#FFFFFF" />
+                
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

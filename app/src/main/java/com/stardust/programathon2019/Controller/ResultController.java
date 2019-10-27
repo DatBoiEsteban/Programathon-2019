@@ -48,7 +48,7 @@ public class ResultController {
                         }
                     }*/
 
-                    //System.out.println(entity);
+                    System.out.println(entity);
                     //System.out.println("!---------------------------");
                     callback.onComplete(entity);
 
