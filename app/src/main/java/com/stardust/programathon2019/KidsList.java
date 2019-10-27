@@ -13,14 +13,17 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
 import com.stardust.programathon2019.Controller.AttendanceController;
+import com.stardust.programathon2019.Controller.FormController;
 import com.stardust.programathon2019.Controller.ResultController;
 import com.stardust.programathon2019.Controller.StudentController;
+import com.stardust.programathon2019.Model.AreaResult;
 import com.stardust.programathon2019.Model.Attendance;
 import com.stardust.programathon2019.Model.AwaitableResponse;
 import com.stardust.programathon2019.Model.Kid;
 import com.stardust.programathon2019.Controller.SessionManager;
 import com.stardust.programathon2019.Model.Result;
 import com.stardust.programathon2019.Model.ResultASQ;
+import com.stardust.programathon2019.Network.FormService;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -91,46 +94,12 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
         dialog = new Dialog(this);
 
         ctx = getBaseContext();
-        List<ResultASQ> results = new ArrayList<>();
 
-        int attendanceId = 4;
+        //FormController.getByName("10 Meses ASQ-3");
 
-        results.add(new ResultASQ(0,attendanceId,5,5,0));
-        results.add(new ResultASQ(0,attendanceId,5,5,2));
-        results.add(new ResultASQ(0,attendanceId,5,5,3));
-        results.add(new ResultASQ(0,attendanceId,5,5,4));
-        results.add(new ResultASQ(0,attendanceId,5,5,5));
-        results.add(new ResultASQ(0,attendanceId,5,5,6));
+        //List<ResultASQ> results = new ArrayList<>();
 
-        results.add(new ResultASQ(0,attendanceId,5,4,0));
-        results.add(new ResultASQ(0,attendanceId,5,4,2));
-        results.add(new ResultASQ(0,attendanceId,5,4,3));
-        results.add(new ResultASQ(0,attendanceId,5,4,4));
-        results.add(new ResultASQ(0,attendanceId,5,4,5));
-        results.add(new ResultASQ(0,attendanceId,5,4,6));
-
-        results.add(new ResultASQ(0,attendanceId,5,3,0));
-        results.add(new ResultASQ(0,attendanceId,5,3,2));
-        results.add(new ResultASQ(0,attendanceId,5,3,3));
-        results.add(new ResultASQ(0,attendanceId,5,3,4));
-        results.add(new ResultASQ(0,attendanceId,5,3,5));
-        results.add(new ResultASQ(0,attendanceId,5,3,6));
-
-        results.add(new ResultASQ(0,attendanceId,5,2,0));
-        results.add(new ResultASQ(0,attendanceId,5,2,2));
-        results.add(new ResultASQ(0,attendanceId,5,2,3));
-        results.add(new ResultASQ(0,attendanceId,5,2,4));
-        results.add(new ResultASQ(0,attendanceId,5,2,5));
-        results.add(new ResultASQ(0,attendanceId,5,2,6));
-
-        results.add(new ResultASQ(0,attendanceId,5,1,0));
-        results.add(new ResultASQ(0,attendanceId,5,1,2));
-        results.add(new ResultASQ(0,attendanceId,5,1,3));
-        results.add(new ResultASQ(0,attendanceId,5,1,4));
-        results.add(new ResultASQ(0,attendanceId,5,1,5));
-        results.add(new ResultASQ(0,attendanceId,5,1,6));
-
-        ResultController.updateResult(results);
+        //ResultController.addResult(results);
 
 
     }

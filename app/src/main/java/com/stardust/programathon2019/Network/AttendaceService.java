@@ -2,6 +2,7 @@ package com.stardust.programathon2019.Network;
 
 import com.stardust.programathon2019.Model.Attendance;
 import com.stardust.programathon2019.Model.AttendanceForm;
+import com.stardust.programathon2019.Model.AttendanceRequest;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -27,5 +28,5 @@ public interface AttendaceService {
     Call<ResponseBody> getByApplicatorId(@Query("applicatorId") int id);
 
     @POST("/ApiServer/api/Attendance/AddAttendance")
-    Call<ResponseBody> addAttendance(@Body Attendance body);
+    Call<ResponseBody> addAttendance(@Body AttendanceRequest body);
 }
