@@ -15,7 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResultsList"></activity>
+        <activity android:name=".questionaire_table"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".HistoryActivity"></activity>
+        <activity android:name=".ResultsList" />
         <activity
             android:name=".KidDataShell"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -23,6 +26,7 @@
             android:name=".KidsList"
             android:label="@string/title_activity_kids_list"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ListaDeResultados" android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name"
@@ -33,6 +37,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

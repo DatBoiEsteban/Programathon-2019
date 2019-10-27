@@ -16,6 +16,7 @@ import com.stardust.programathon2019.Controller.AttendanceController;
 import com.stardust.programathon2019.Controller.FormController;
 import com.stardust.programathon2019.Controller.ResultController;
 import com.stardust.programathon2019.Controller.StudentController;
+import com.stardust.programathon2019.Model.Area;
 import com.stardust.programathon2019.Model.AreaResult;
 import com.stardust.programathon2019.Model.Attendance;
 import com.stardust.programathon2019.Model.AwaitableResponse;
@@ -320,4 +321,5 @@ public class KidsList extends AppCompatActivity implements AwaitableResponse {
 
 
     }
+
 }
