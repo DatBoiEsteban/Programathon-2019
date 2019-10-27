@@ -7,8 +7,8 @@ import retrofit2.http.POST;
 
 public interface StudentService {
 
-    @GET("/ApiServer/api/Student/GetMyStudent")
-    Call<ResponseBody> GetMyStudent();
+    @GET("/ApiServer/api/Student/GetMyStudents")
+    Call<ResponseBody> GetMyStudents();
 
     @GET("/ApiServer/api/Student/GetByClassRoom")
     Call<ResponseBody> GetByClassRoom();
